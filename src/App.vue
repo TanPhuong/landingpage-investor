@@ -25,9 +25,6 @@ import HomeView from './views/HomeView.vue';
               <li class="nav-item me-4">
                 <a class="nav-link fw-bold" href="#">Đặc quyền cao cấp dành riêng</a>
               </li>
-              <li class="nav-item me-4">
-                <a class="nav-link fw-bold" href="#">Mục tiêu IPO 2028</a>
-              </li>
             </ul>
           </div>
 
@@ -86,11 +83,11 @@ import HomeView from './views/HomeView.vue';
                 Số 208, Hoàng Văn Thụ, Phường 4, Quận Tân Bình, TP. HCM
               </div>
 
-              <div class="contact-item company-email mb-2">
+              <div class="contact-item company-email mb-2" style="color: #005ea0;">
                 info@vietnamtouristvn.vn
               </div>
 
-              <div class="contact-item company-phone mb-2">
+              <div class="contact-item company-phone mb-2" style="color: #005ea0;">
                 (028) 3636 0292 - (028) 3636 0293
               </div>
             </div>
@@ -106,8 +103,9 @@ import HomeView from './views/HomeView.vue';
           </div>
 
           <div class="company-information">
-            <div class="company-title text-uppercase fs-3 fw-medium" style="color: #005ea0;">Công ty CP Thương mại và dịch vụ du lịch Vietnam Tourist</div>
-            <div class="information_container d-flex">
+            <div class="company-title text-uppercase fs-3 fw-medium" style="color: #005ea0;">Công ty CP Thương mại và
+              dịch vụ du lịch Vietnam Tourist</div>
+            <div class="information_container d-flex mt-2">
               <div class="infor-item pe-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                   <path fill="currentColor"
@@ -127,7 +125,16 @@ import HomeView from './views/HomeView.vue';
           </div>
         </div>
       </div>
+      <div class="copy-right page-gradient-blue text-center py-2 text-white">
+        Copyright
+        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24">
+          <path fill="#fff"
+            d="M11.88 9.14c1.28.06 1.61 1.15 1.63 1.66h1.79c-.08-1.98-1.49-3.19-3.45-3.19C9.64 7.61 8 9 8 12.14c0 1.94.93 4.24 3.84 4.24c2.22 0 3.41-1.65 3.44-2.95h-1.79c-.03.59-.45 1.38-1.63 1.44c-1.31-.04-1.86-1.06-1.86-2.73c0-2.89 1.28-2.98 1.88-3M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8" />
+        </svg>
+        2024 Vietnam Tourist
+      </div>
     </footer>
+
   </main>
 </template>
 

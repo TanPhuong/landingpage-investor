@@ -32,14 +32,8 @@ const data = [
   <main>
     <!-- Form register section -->
     <div id="form-register_section">
-      <div class="w-95 d-flex justify-content-between" style="padding: 30px 0;">
+      <div class="w-95 d-flex justify-content-between" style="padding: 180px 0;">
         <div class="introduction-text text-white w-50">
-
-          <div class="container">
-            <div class="company-name text-uppercase fw-semibold fs-1" style="letter-spacing: 1px;">Vietnam Tourist</div>
-            <div class="company-slogan text-capitalize fst-italic fw-medium fs-5">"An tâm đầu tư - Tài sản vững bền"
-            </div>
-          </div>
         </div>
 
         <div class="form-register_container" style="width: 40%;">
@@ -109,9 +103,13 @@ const data = [
         <div class="reason-item_container d-flex justify-content-around text-center my-5">
           <div class="reason-item w-25">
             <div class="icon-container">
-              
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 20 20">
+                <path fill="#f0578a"
+                  d="M14 2.75a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-.69l-4.47 4.47a.75.75 0 0 1-1.06 0L8.5 6.56l-4.22 4.22a.75.75 0 1 1-1.06-1.06l4.75-4.75a.75.75 0 0 1 1.06 0l2.47 2.47l3.94-3.94h-.69a.75.75 0 0 1-.75-.75M3.75 14a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 .75-.75m4.75-2.25a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0zM11.75 13a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75m4.75-3.25a.75.75 0 0 0-1.5 0v7.5a.75.75 0 0 0 1.5 0z" />
+              </svg>
             </div>
-            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;"><span class="fw-semibold">Tăng trưởng tài sản</span> nhanh hơn
+            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;"><span class="fw-semibold">Tăng
+                trưởng tài sản</span> nhanh hơn
               so với các
               phương thức khác</div>
           </div>
@@ -123,16 +121,21 @@ const data = [
                   d="M20.04 8.71V4h-4.7L12 .69L8.71 4H4v4.71L.69 12L4 15.34v4.7h4.71L12 23.35l3.34-3.31h4.7v-4.7L23.35 12zM8.83 7.05c.98 0 1.77.79 1.77 1.78a1.77 1.77 0 0 1-1.77 1.77c-.99 0-1.78-.79-1.78-1.77c0-.99.79-1.78 1.78-1.78M15.22 17c-.98 0-1.77-.8-1.77-1.78a1.77 1.77 0 0 1 1.77-1.77c.98 0 1.78.79 1.78 1.77A1.78 1.78 0 0 1 15.22 17m-6.72.03L7 15.53L15.53 7l1.5 1.5z" />
               </svg>
             </div>
-            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tỷ suất lợi nhuận hấp dẫn lên đến <span
-                class="fw-semibold">20%/năm</span></div>
+            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tỷ suất lợi nhuận hấp dẫn lên đến
+              <span class="fw-semibold">20%/năm</span>
+            </div>
           </div>
 
           <div class="reason-item w-25">
             <div class="icon-container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16">
+                <path fill="#f0578a"
+                  d="M3.75 2a.75.75 0 0 0-.662.397l-2 3.75a.75.75 0 0 0 .071.815l4.934 6.316A3.3 3.3 0 0 1 6 12.5a2.5 2.5 0 0 1 1.451-2.27L6.598 7.5h.943A3 3 0 0 1 8.264 6H6.398l.625-2.5h1.954l.427 1.707a3 3 0 0 1 1.5-.18l-.38-1.527H11.8L13.133 6h-.397a2.99 2.99 0 0 1 .649 2.825l1.456-1.863a.75.75 0 0 0 .07-.815l-2-3.75A.75.75 0 0 0 12.25 2zm-.883 4L4.2 3.5h1.277L4.852 6zm.616 1.5h1.544l1.029 3.293zM12.5 8a2 2 0 1 1-4 0a2 2 0 0 1 4 0m1.5 4.5c0 1.245-1 2.5-3.5 2.5S7 13.75 7 12.5A1.5 1.5 0 0 1 8.5 11h4a1.5 1.5 0 0 1 1.5 1.5" />
+              </svg>
 
             </div>
-            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tập trung kinh doanh và sự nghiệp mà vẫn <span
-                class="fw-semibold">đầu tư
+            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tập trung kinh doanh và sự nghiệp mà
+              vẫn <span class="fw-semibold">đầu tư
                 hiệu quả</span></div>
           </div>
 
@@ -144,7 +147,8 @@ const data = [
                   d="m14.347.66l3.18 4.456l2.097-.715L21.538 10h.962v12h-21V10h.51v-.01l.648.006zM9.397 10h10.028l-1.037-3.033l-1.522.487zM7.839 8.417L15.55 5.79l-1.604-2.25zM5.5 12h-2v2a2 2 0 0 0 2-2m10 4a3.5 3.5 0 1 0-7 0a3.5 3.5 0 0 0 7 0m5 4v-2a2 2 0 0 0-2 2zm-2-8a2 2 0 0 0 2 2v-2zm-15 8h2a2 2 0 0 0-2-2z" />
               </svg>
             </div>
-            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tham gia với mức đầu tư thấp <span class="fw-semibold">chỉ từ
+            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tham gia với mức đầu tư thấp <span
+                class="fw-semibold">chỉ từ
                 10.000.000đ</span></div>
           </div>
         </div>
@@ -153,17 +157,16 @@ const data = [
 
     <!-- Consultant section -->
     <div id="consultant_section">
-      <div class="w-95 p-70 d-flex justify-content-around">
-        <div class="img-section w-25 rounded-circle page-gradient-blue">
-          <!-- <img src="" alt=""> -->
-
+      <div class="w-95 p-70 d-flex justify-content-around align-items-center">
+        <div class="img-section w-25">
+          <img src="../assets/images/Model 2.png" alt="" class="block w-100">
         </div>
 
         <div class="detail-section" style="width: 40%;">
           <div class="title-section fw-semibold fs-4" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
           <div class="emphasize-text fw-bold fs-1 page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
 
-          <div class="description-text" style="text-align: justify;">Kênh đầu tư Vietnam Tourist là quỹ đầu tư được
+          <div class="description-text fw-semibold mt-2" style="text-align: justify;">Kênh đầu tư Vietnam Tourist là quỹ đầu tư được
             thành lập bởi Công ty Cổ phần
             Thương mại và Dịch vụ Vietnam Tourist được thành lập năm 2017,
             là một trong những doanh nghiệp lữ hành hàng đầu tại Việt Nam với mạng lưới chi nhánh trên toàn quốc, chuyên
@@ -221,7 +224,8 @@ const data = [
             </div>
 
             <div class="title-privilege fw-bold fs-5 mt-4">Chính sách đặc biệt khi mua Tour</div>
-            <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Cổ đông trở thành khách VIP, nhận ngay ưu đãi đặc biệt trên mọi chuyến đi.</div>
+            <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Cổ đông trở thành khách VIP, nhận ngay ưu
+              đãi đặc biệt trên mọi chuyến đi.</div>
           </div>
 
           <div class="privilege-item col">
@@ -234,7 +238,8 @@ const data = [
             </div>
 
             <div class="title-privilege fw-bold fs-5 mt-4">Cơ hội trở thành Đại lý bán hàng</div>
-            <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Mức hoa hồng hấp dẫn, được đào tạo kỹ năng chuyên nghiệp - bài bản.
+            <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Mức hoa hồng hấp dẫn, được đào tạo kỹ năng
+              chuyên nghiệp - bài bản.
             </div>
           </div>
 
@@ -247,7 +252,8 @@ const data = [
             </div>
 
             <div class="title-privilege fw-bold fs-5 mt-4">Tặng vé du lịch miễn phí 100%</div>
-            <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Trải nghiệm những chuyến du lịch miễn phí hoàn toàn từ Vietnam
+            <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Trải nghiệm những chuyến du lịch miễn phí
+              hoàn toàn từ Vietnam
               Tourist.</div>
           </div>
         </div>
@@ -256,16 +262,15 @@ const data = [
 
     <!-- Growth section -->
     <div id="growth_section">
-      <div class="w-95 p-70 d-flex justify-content-around">
-        <div class="img-section w-25 ">
-          <!-- <img src="" alt=""> -->
-
+      <div class="w-95 d-flex justify-content-center align-items-center" style="padding-top: 100px;">
+        <div class="img-section w-25">
+          <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
         </div>
 
-        <div class="detail-section" style="width: 40%;">
+        <div class="detail-section" style="margin-left: 150px; width: 40%;">
           <div class="emphasize-text fw-bold fs-1 page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
 
-          <div class="description-text" style="text-align: justify;">Vietnam Tourist cam kết minh bạch tài chính với báo
+          <div class="description-text mt-3 fw-semibold" style="text-align: justify;">Vietnam Tourist cam kết minh bạch tài chính với báo
             cáo chi tiết hàng quý và từng năm, đảm bảo mục tiêu phát triển rõ ràng.
             Đồng hành cùng chúng tôi để gia tăng tài sản bền vừng!
           </div>
@@ -279,11 +284,13 @@ const data = [
     </div>
     <!-- Representative section -->
     <div id="representative_section">
-      <div class="w-95 p-70 d-flex align-items-center">
+      <div class="w-95 p-70 d-flex align-items-center justify-content-center">
         <div class="commit_container" style="width: 30%;">
-          <div class="title-section fw-semibold fs-4" style="color: #f05083;">Với niềm đam mê khát khao phát triển trong ngành du lịch</div>
+          <div class="title-section fw-semibold fs-4" style="color: #f05083;">Với niềm đam mê khát khao phát triển trong
+            ngành du lịch</div>
 
-          <div class="commit-text fw-semibold fs-1">Vietnam Tourist cam kết luôn đồng hành và tạo nên giá trị cùng quý cổ đông</div>
+          <div class="commit-text fw-semibold fs-1">Vietnam Tourist cam kết luôn đồng hành và tạo nên giá trị cùng quý
+            cổ đông</div>
           <hr>
 
           <div class="ceo_container d-flex align-items-center">
@@ -298,8 +305,15 @@ const data = [
           </div>
         </div>
 
-        <div class="ceo-portait">
+        <div class="ceo-portait text-center position-relative" style="width: 40%;">
+          <img src="../assets/images/ceo.jpg" alt="" class="w-75 block" style="border-radius: 15%;">
 
+          <div class="weird-div fs-1 position-absolute rounded-circle page-gradient-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="75%" height="75%" viewBox="0 0 20 20">
+              <path fill="#fff"
+                d="m7 6l1-2H6C3.79 4 2 6.79 2 9v7h7V9H5c0-3 2-3 2-3m7 3c0-3 2-3 2-3l1-2h-2c-2.21 0-4 2.79-4 5v7h7V9z" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -309,7 +323,11 @@ const data = [
 <style scoped>
 /* Form register section */
 #form-register_section {
-  background-color: #005ea0;
+  /* background-color: #005ea0; */
+  background-image: url(../assets/images/Banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 
   & .form-register_container {
     background-color: #fff;
@@ -330,8 +348,8 @@ select.input-investor {
   padding: 6px 12px;
   font-weight: 500;
 }
-Ư
-.input-investor::placeholder {
+
+Ư .input-investor::placeholder {
   padding: 4px;
   font-size: 14px;
   color: #d9d9d9;
@@ -403,7 +421,15 @@ tbody tr:last-child {
   background-image: url(../assets/images/growth-background.avif);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
+}
+
+/* Representation section */
+.weird-div {
+  width: 100px;
+  height: 100px;
+  padding: 15px;
+  bottom: 40%;
+  left: 5%;
 }
 </style>

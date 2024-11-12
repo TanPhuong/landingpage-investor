@@ -109,7 +109,7 @@ const data = [
         <div class="reason-item_container d-flex justify-content-around text-center my-5">
           <div class="reason-item w-25">
             <div class="icon-container">
-
+              
             </div>
             <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;"><span class="fw-semibold">Tăng trưởng tài sản</span> nhanh hơn
               so với các

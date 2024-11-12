@@ -32,10 +32,7 @@ const data = [
   <main>
     <!-- Form register section -->
     <div id="form-register_section">
-      <div class="w-95 d-flex justify-content-between" style="padding: 180px 0;">
-        <div class="introduction-text text-white w-50">
-        </div>
-
+      <div class="w-95 d-flex justify-content-end" style="padding: 180px 0;">
         <div class="form-register_container" style="width: 40%;">
           <div class="p-4">
             <div class="title-section fw-semibold fs-3 mb-4">👉 Đăng ký nhận tư vấn đầu tư!</div>

@@ -1,14 +1,40 @@
-<script setup>
+<script>
 import HomeView from './views/HomeView.vue';
+import NavigationMobile from './components/NavigationMobile.vue';
+
+export default {
+  components: {
+    HomeView,
+    NavigationMobile
+  },
+  data: () => {
+    return {
+      mobileView: false
+    }
+  },
+  methods: {
+    handleView() {
+      if (window.innerWidth <= 1024) {
+        this.mobileView = true;
+      } else {
+        this.mobileView = false;
+      }
+    }
+  },
+  created() {
+    this.handleView();
+  }
+}
+
 </script>
 
 <template>
   <main>
     <header class="w-100 bg-light">
-      <nav class="navbar navbar-expand-lg w-95">
+      <nav class="navbar navbar-expand-lg w-95" v-if="!mobileView">
         <div class="container-fluid p-0">
           <a class="navbar-brand" href="#">
-            <img src="./assets/images/logo-company.jpg" alt="Logo" width="200px">
+            <img src="./assets/images/logo-company.jpg" alt="Logo" class="w-75">
           </a>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -34,6 +60,8 @@ import HomeView from './views/HomeView.vue';
 
         </div>
       </nav>
+
+      <NavigationMobile v-if="mobileView" />
     </header>
 
     <!-- Body part -->
@@ -139,7 +167,6 @@ import HomeView from './views/HomeView.vue';
 </template>
 
 <style>
-/* Adding responsive */
 .w-95 {
   width: 95%;
   margin: auto;
@@ -190,5 +217,19 @@ header {
 
 .page-btn:hover {
   box-shadow: 0 0 8px #f05083;
+}
+
+@media (max-width: 1024px) {
+  main {
+    overflow: hidden;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  .page-btn {
+    padding: 6px 12px;
+  }
 }
 </style>

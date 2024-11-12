@@ -153,7 +153,7 @@ const data = [
 
     <!-- Consultant section -->
     <div id="consultant_section">
-      <div class="w-95 py-5 d-flex justify-content-around">
+      <div class="w-95 p-70 d-flex justify-content-around">
         <div class="img-section w-25 rounded-circle page-gradient-blue">
           <!-- <img src="" alt=""> -->
 
@@ -179,7 +179,7 @@ const data = [
 
     <!-- Benefit section -->
     <div id="benefit_section">
-      <div class="w-95 py-5">
+      <div class="w-95 p-70">
         <div class="title-section text-center fs-1 fw-semibold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
 
         <!-- Adjust the color -->
@@ -256,7 +256,7 @@ const data = [
 
     <!-- Growth section -->
     <div id="growth_section">
-      <div class="w-95 py-5 d-flex justify-content-around">
+      <div class="w-95 p-70 d-flex justify-content-around">
         <div class="img-section w-25 ">
           <!-- <img src="" alt=""> -->
 
@@ -279,8 +279,8 @@ const data = [
     </div>
     <!-- Representative section -->
     <div id="representative_section">
-      <div class="w-95 my-5 d-flex align-items-center">
-        <div class="commit_container" style="width: 40%;">
+      <div class="w-95 p-70 d-flex align-items-center">
+        <div class="commit_container" style="width: 30%;">
           <div class="title-section fw-semibold fs-4" style="color: #f05083;">Với niềm đam mê khát khao phát triển trong ngành du lịch</div>
 
           <div class="commit-text fw-semibold fs-1">Vietnam Tourist cam kết luôn đồng hành và tạo nên giá trị cùng quý cổ đông</div>
@@ -330,7 +330,7 @@ select.input-investor {
   padding: 6px 12px;
   font-weight: 500;
 }
-
+Ư
 .input-investor::placeholder {
   padding: 4px;
   font-size: 14px;

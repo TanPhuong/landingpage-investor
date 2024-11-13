@@ -44,9 +44,8 @@ const data = [
     </div>
 
     <!-- Form register section -->
-    <div id="form-register_section">
-      <div class="form-register_wrapper w-95 d-flex justify-content-end" style="padding: 180px 0;">
-
+    <div id="form-register_section" style="position: relative;">
+      <div class="form-register_wrapper w-95 d-flex justify-content-end" style="position: absolute; top: 20%;">
         <div class="form-register_container" style="width: 40%;">
           <div class="p-4">
             <div class="title-section aver-semi-bold fs-3 mb-4">👉 Đăng ký nhận tư vấn đầu tư!</div>
@@ -107,7 +106,7 @@ const data = [
     <!-- Reason section -->
     <div id="reason_section" class="w-95">
       <div class="reason_container p-70">
-        <div class="title-section text-center fs-1 aver-semi-bold page-text-gradient">
+        <div class="title-section text-center fs-1 aver-bold page-text-gradient">
           Lý do nên chọn đầu tư vào Vietnam Tourist
         </div>
 
@@ -218,7 +217,7 @@ const data = [
     <!-- Benefit section -->
     <div id="benefit_section">
       <div class="w-95 p-70">
-        <div class="title-section text-center fs-1 aver-semi-bold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
+        <div class="title-section text-center fs-1 aver-bold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
 
         <div class="table-container w-100">
           <table class="table " style="margin: auto; width: 70%;">
@@ -246,7 +245,7 @@ const data = [
     <!-- Privilege section -->
     <div id="privilege_section" class="page-gradient-blue">
       <div class="w-95 p-70">
-        <div class="title-section text-white fs-1 aver-semi-bold text-center">Đặc quyền dành riêng cho cổ đông</div>
+        <div class="title-section text-white fs-1 aver-bold text-center">Đặc quyền dành riêng cho cổ đông</div>
 
         <div class="privilege-item_container row text-center text-white my-5">
           <div class="privilege-item col">
@@ -347,7 +346,7 @@ const data = [
             trong
             ngành du lịch</div>
 
-          <div class="commit-text aver-semi-bold fs-1 mt-3">Vietnam Tourist cam kết luôn đồng hành và tạo nên giá trị
+          <div class="commit-text aver-bold fs-1 mt-3">Vietnam Tourist cam kết luôn đồng hành và tạo nên giá trị
             cùng quý
             cổ đông</div>
           <hr>

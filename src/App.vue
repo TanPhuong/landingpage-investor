@@ -231,5 +231,22 @@ header {
   .page-btn {
     padding: 6px 12px;
   }
+
+  footer .fin_container {
+    display: block !important;
+
+    & .company-information {
+      margin-top: 20px;
+
+      & .information_container {
+        flex-wrap: wrap;
+
+        & .infor-item {
+          border: none !important;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
 </style>

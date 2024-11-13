@@ -97,7 +97,7 @@ const data = [
           Lý do nên chọn đầu tư vào Vietnam Tourist
         </div>
 
-        <div class="reason-item_container d-flex justify-content-around text-center my-5">
+        <div class="reason-item_container d-flex justify-content-around text-center my-5" style="flex-wrap: wrap;">
           <div class="reason-item w-25">
             <div class="icon-container">
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 20 20">
@@ -154,16 +154,19 @@ const data = [
 
     <!-- Consultant section -->
     <div id="consultant_section">
-      <div class="w-95 p-70 d-flex justify-content-around align-items-center">
+      <div class="consultant_container w-95 p-70 d-flex justify-content-around align-items-center">
         <div class="img-section w-25">
           <img src="../assets/images/Model 2.png" alt="" class="block w-100">
         </div>
 
         <div class="detail-section" style="width: 40%;">
-          <div class="title-section fw-semibold fs-4" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
-          <div class="emphasize-text fw-bold fs-1 page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
+          <div class="intro-container">
+            <div class="title-section fw-semibold fs-4" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
+            <div class="emphasize-text fw-bold fs-1 page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
+          </div>
 
-          <div class="description-text fw-semibold mt-2" style="text-align: justify;">Kênh đầu tư Vietnam Tourist là quỹ đầu tư được
+          <div class="description-text fw-semibold mt-2" style="text-align: justify;">Kênh đầu tư Vietnam Tourist là quỹ
+            đầu tư được
             thành lập bởi Công ty Cổ phần
             Thương mại và Dịch vụ Vietnam Tourist được thành lập năm 2017,
             là một trong những doanh nghiệp lữ hành hàng đầu tại Việt Nam với mạng lưới chi nhánh trên toàn quốc, chuyên
@@ -219,10 +222,11 @@ const data = [
                   d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14z" />
               </svg>
             </div>
-
-            <div class="title-privilege fw-bold fs-5 mt-4">Chính sách đặc biệt khi mua Tour</div>
-            <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Cổ đông trở thành khách VIP, nhận ngay ưu
-              đãi đặc biệt trên mọi chuyến đi.</div>
+            <div class="desc-wrapper">
+              <div class="title-privilege fw-bold fs-5 mt-4">Chính sách đặc biệt khi mua Tour</div>
+              <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Cổ đông trở thành khách VIP, nhận ngay ưu
+                đãi đặc biệt trên mọi chuyến đi.</div>
+            </div>
           </div>
 
           <div class="privilege-item col">
@@ -233,10 +237,12 @@ const data = [
                   clip-rule="evenodd" />
               </svg>
             </div>
-
-            <div class="title-privilege fw-bold fs-5 mt-4">Cơ hội trở thành Đại lý bán hàng</div>
-            <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Mức hoa hồng hấp dẫn, được đào tạo kỹ năng
-              chuyên nghiệp - bài bản.
+            <div class="desc-wrapper">
+              <div class="title-privilege fw-bold fs-5 mt-4">Cơ hội trở thành Đại lý bán hàng</div>
+              <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Mức hoa hồng hấp dẫn, được đào tạo kỹ
+                năng
+                chuyên nghiệp - bài bản.
+              </div>
             </div>
           </div>
 
@@ -247,11 +253,12 @@ const data = [
                   d="M640 832H64V640a128 128 0 1 0 0-256V192h576v160h64V192h256v192a128 128 0 1 0 0 256v192H704V672h-64zm0-416v192h64V416z" />
               </svg>
             </div>
-
-            <div class="title-privilege fw-bold fs-5 mt-4">Tặng vé du lịch miễn phí 100%</div>
-            <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Trải nghiệm những chuyến du lịch miễn phí
-              hoàn toàn từ Vietnam
-              Tourist.</div>
+            <div class="desc-wrapper">
+              <div class="title-privilege fw-bold fs-5 mt-4">Tặng vé du lịch miễn phí 100%</div>
+              <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Trải nghiệm những chuyến du lịch miễn phí
+                hoàn toàn từ Vietnam
+                Tourist.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -259,7 +266,7 @@ const data = [
 
     <!-- Growth section -->
     <div id="growth_section">
-      <div class="w-95 d-flex justify-content-center align-items-center" style="padding-top: 100px;">
+      <div class="growth_container w-95 d-flex justify-content-center align-items-center" style="padding-top: 100px;">
         <div class="img-section w-25">
           <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
         </div>
@@ -267,7 +274,8 @@ const data = [
         <div class="detail-section" style="margin-left: 150px; width: 40%;">
           <div class="emphasize-text fw-bold fs-1 page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
 
-          <div class="description-text mt-3 fw-semibold" style="text-align: justify;">Vietnam Tourist cam kết minh bạch tài chính với báo
+          <div class="description-text mt-3 fw-semibold" style="text-align: justify;">Vietnam Tourist cam kết minh bạch
+            tài chính với báo
             cáo chi tiết hàng quý và từng năm, đảm bảo mục tiêu phát triển rõ ràng.
             Đồng hành cùng chúng tôi để gia tăng tài sản bền vừng!
           </div>
@@ -279,9 +287,10 @@ const data = [
 
       </div>
     </div>
+
     <!-- Representative section -->
     <div id="representative_section">
-      <div class="w-95 p-70 d-flex align-items-center justify-content-center">
+      <div class="representative_container w-95 p-70 d-flex align-items-center justify-content-center">
         <div class="commit_container" style="width: 30%;">
           <div class="title-section fw-semibold fs-4" style="color: #f05083;">Với niềm đam mê khát khao phát triển trong
             ngành du lịch</div>
@@ -302,7 +311,7 @@ const data = [
           </div>
         </div>
 
-        <div class="ceo-portait text-center position-relative" style="width: 40%;">
+        <div class="ceo-portrait text-center position-relative" style="width: 40%;">
           <img src="../assets/images/ceo.jpg" alt="" class="w-75 block" style="border-radius: 15%;">
 
           <div class="weird-div fs-1 position-absolute rounded-circle page-gradient-blue">
@@ -428,5 +437,165 @@ tbody tr:last-child {
   padding: 15px;
   bottom: 40%;
   left: 5%;
+}
+
+@media (max-width: 1024px) {
+
+  #form-register_section {
+    
+  }
+
+
+  #reason_section {
+
+    & .reason-item_container .reason-item {
+      width: 50% !important;
+      margin-top: 10px;
+    }
+  }
+
+  .consultant_container {
+    display: block !important;
+
+    & .detail-section {
+      width: 100% !important;
+      position: relative;
+    }
+
+    & .img-section {
+      width: 100% !important;
+      text-align: center;
+      margin-top: 70px;
+      padding: 50px;
+
+      & img {
+        width: 80% !important;
+      }
+    }
+
+    & .intro-container {
+      text-align: center;
+      position: absolute;
+      top: -200%;
+    }
+
+    & .btn-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  #benefit_section {
+
+    & .table-container table {
+      width: 100% !important;
+      font-size: 14px !important;
+
+      & .investment-item {
+        padding: 24px 10px !important;
+      }
+    }
+  }
+
+  #privilege_section {
+
+    & .privilege-item_container {
+      display: flex !important;
+      flex-direction: column !important;
+      margin-top: 30px !important;
+
+      & .privilege-item {
+        display: flex !important;
+        margin-top: 20px;
+
+        & .icon-wrapper {
+          width: 80px;
+          height: 60px;
+          padding: 5px 10px;
+          border-radius: 15px;
+        }
+
+        & .desc-wrapper {
+          text-align: left;
+          margin-left: 20px;
+        }
+
+        & .title-privilege {
+          font-size: 18px !important;
+        }
+
+        & .desc-privilege {
+          font-size: 16px !important;
+          width: 100% !important;
+          margin: 0 !important;
+          padding-top: 8px;
+        }
+      }
+    }
+  }
+
+  #growth_section .growth_container {
+    display: block !important;
+
+    & .img-section {
+      width: 100% !important;
+      text-align: center;
+
+      & img {
+        width: 80% !important;
+        padding: 25px
+      }
+    }
+
+    & .detail-section {
+      width: 100% !important;
+      margin-left: 0 !important;
+      position: relative;
+
+      & .emphasize-text {
+        position: absolute;
+        top: -300%;
+        text-align: center;
+      }
+
+      & .btn-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  #representative_section .representative_container {
+    flex-direction: row-reverse;
+    align-items: start !important;
+
+    & .commit_container {
+      width: 60% !important;
+      margin-left: 10px;
+
+      & .title-section {
+        font-size: 16px !important;
+      }
+
+      & .commit-text {
+        font-size: 24px !important;
+      }
+
+      & .btn-container {
+        display: none !important;
+      }
+    }
+
+    & .ceo-portrait {
+
+      & img {
+        width: 90% !important;
+      }
+
+      & .weird-div {
+        display: none !important;
+      }
+    }
+  }
 }
 </style>

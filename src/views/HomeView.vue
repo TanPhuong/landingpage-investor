@@ -49,12 +49,12 @@ const data = [
 
         <div class="form-register_container" style="width: 40%;">
           <div class="p-4">
-            <div class="title-section fw-semibold fs-3 mb-4">👉 Đăng ký nhận tư vấn đầu tư!</div>
+            <div class="title-section aver-semi-bold fs-3 mb-4">👉 Đăng ký nhận tư vấn đầu tư!</div>
 
             <form action="submit">
               <!-- Name input -->
               <div class="register-item mb-3">
-                <label for="nameInput" class="form-label fw-semibold">Họ và tên
+                <label for="nameInput" class="form-label aver-semi-bold">Họ và tên
                   <span class="text-danger">(*)</span></label>
                 <input type="text" class="form-control input-investor" id="nameInput"
                   placeholder="Nhập Họ và tên của bạn">
@@ -63,13 +63,13 @@ const data = [
               <!-- phone and email input -->
               <div class="register-item_wrapper mb-3 row">
                 <div class="register-item col-6">
-                  <label for="phoneInput" class="form-label fw-semibold">Số điện thoại
+                  <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                     <span class="text-danger">(*)</span></label>
                   <input type="number" class="form-control input-investor" id="phoneInput"
                     placeholder="Nhập số điện thoại của bạn">
                 </div>
                 <div class="register-item col-6">
-                  <label for="emailInput" class="form-label fw-semibold">Email
+                  <label for="emailInput" class="form-label aver-semi-bold">Email
                     <span class="text-danger">(*)</span></label>
                   <input type="email" class="form-control input-investor" id="emailInput"
                     placeholder="Nhập email của bạn">
@@ -78,7 +78,7 @@ const data = [
 
               <!-- investment -->
               <div class="register-item mb-3">
-                <label for="investmentInput" class="form-label fw-semibold">Số tiền dự định đầu tư
+                <label for="investmentInput" class="form-label aver-semi-bold">Số tiền dự định đầu tư
                   <span class="text-danger">(*)</span></label>
                 <select name="investmentInput" id="investmentInput" class="form-select form-select-sm input-investor">
                   <option selected>Chọn số tiền dự định đầu tư</option>
@@ -87,10 +87,10 @@ const data = [
 
               <!-- city -->
               <div class="register-item mb-3">
-                <label for="cityInput" class="form-label fw-semibold">Tỉnh/Thành phố
+                <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố
                   <span class="text-danger">(*)</span></label>
                 <select name="cityInput" id="cityInput" class="form-select form-select-sm input-investor">
-                  <option selected class="fw-bold">Chọn Tỉnh/Thành phố</option>
+                  <option selected class="aver-bold">Chọn Tỉnh/Thành phố</option>
                 </select>
               </div>
 
@@ -107,7 +107,7 @@ const data = [
     <!-- Reason section -->
     <div id="reason_section" class="w-95">
       <div class="p-70">
-        <div class="title-section text-center fs-1 fw-semibold">
+        <div class="title-section text-center fs-1 aver-semi-bold page-text-gradient">
           Lý do nên chọn đầu tư vào Vietnam Tourist
         </div>
 
@@ -119,7 +119,7 @@ const data = [
                   d="M14 2.75a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-.69l-4.47 4.47a.75.75 0 0 1-1.06 0L8.5 6.56l-4.22 4.22a.75.75 0 1 1-1.06-1.06l4.75-4.75a.75.75 0 0 1 1.06 0l2.47 2.47l3.94-3.94h-.69a.75.75 0 0 1-.75-.75M3.75 14a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 .75-.75m4.75-2.25a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0zM11.75 13a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75m4.75-3.25a.75.75 0 0 0-1.5 0v7.5a.75.75 0 0 0 1.5 0z" />
               </svg>
             </div>
-            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;"><span class="fw-semibold">Tăng
+            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;"><span class="aver-semi-bold">Tăng
                 trưởng tài sản</span> nhanh hơn
               so với các
               phương thức khác</div>
@@ -133,7 +133,7 @@ const data = [
               </svg>
             </div>
             <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tỷ suất lợi nhuận hấp dẫn lên đến
-              <span class="fw-semibold">20%/năm</span>
+              <span class="aver-semi-bold">20%/năm</span>
             </div>
           </div>
 
@@ -146,7 +146,7 @@ const data = [
 
             </div>
             <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tập trung kinh doanh và sự nghiệp mà
-              vẫn <span class="fw-semibold">đầu tư
+              vẫn <span class="aver-semi-bold">đầu tư
                 hiệu quả</span></div>
           </div>
 
@@ -159,7 +159,7 @@ const data = [
               </svg>
             </div>
             <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tham gia với mức đầu tư thấp <span
-                class="fw-semibold">chỉ từ
+                class="aver-semi-bold">chỉ từ
                 10.000.000đ</span></div>
           </div>
         </div>
@@ -175,15 +175,15 @@ const data = [
 
         <div class="detail-section" style="width: 40%;">
           <div class="intro-container">
-            <div class="title-section fw-semibold fs-4" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
-            <div class="emphasize-text fw-bold fs-1 page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
+            <div class="title-section aver-semi-bold fs-4" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
+            <div class="emphasize-text aver-bold fs-1 page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
           </div>
 
           <div class="img-section w-25 my-3" v-if="mobileView">
             <img src="../assets/images/Model 2.png" alt="" class="block w-100">
           </div>
 
-          <div class="description-text fw-semibold mt-2" style="text-align: justify;">Kênh đầu tư Vietnam Tourist là quỹ
+          <div class="description-text mt-2" style="text-align: justify; font-size: 18px;">Kênh đầu tư Vietnam Tourist là quỹ
             đầu tư được
             thành lập bởi Công ty Cổ phần
             Thương mại và Dịch vụ Vietnam Tourist được thành lập năm 2017,
@@ -192,7 +192,7 @@ const data = [
 
           <div class="btn-container my-4">
             <button type="button" class="page-btn">Đăng ký tư vấn</button>
-            <button type="button" class="ceo-mail--btn fw-semibold">Thư ngỏ từ CEO</button>
+            <button type="button" class="ceo-mail--btn aver-semi-bold">Thư ngỏ từ CEO</button>
           </div>
         </div>
       </div>
@@ -201,7 +201,7 @@ const data = [
     <!-- Benefit section -->
     <div id="benefit_section">
       <div class="w-95 p-70">
-        <div class="title-section text-center fs-1 fw-semibold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
+        <div class="title-section text-center fs-1 aver-semi-bold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
 
         <div class="table-container w-100">
           <table class="table " style="margin: auto; width: 70%;">
@@ -229,7 +229,7 @@ const data = [
     <!-- Privilege section -->
     <div id="privilege_section" class="page-gradient-blue">
       <div class="w-95 p-70">
-        <div class="title-section text-white fs-1 fw-semibold text-center">Đặc quyền dành riêng cho cổ đông</div>
+        <div class="title-section text-white fs-1 aver-semi-bold text-center">Đặc quyền dành riêng cho cổ đông</div>
 
         <div class="privilege-item_container row text-center text-white my-5">
           <div class="privilege-item col">
@@ -240,8 +240,8 @@ const data = [
               </svg>
             </div>
             <div class="desc-wrapper">
-              <div class="title-privilege fw-bold fs-5 mt-4">Chính sách đặc biệt khi mua Tour</div>
-              <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Cổ đông trở thành khách VIP, nhận ngay ưu
+              <div class="title-privilege aver-bold fs-5 mt-4">Chính sách đặc biệt khi mua Tour</div>
+              <div class="desc-privilege w-75 fs-5 mt-2 aver-light" style="margin: auto;">Cổ đông trở thành khách VIP, nhận ngay ưu
                 đãi đặc biệt trên mọi chuyến đi.</div>
             </div>
           </div>
@@ -255,8 +255,8 @@ const data = [
               </svg>
             </div>
             <div class="desc-wrapper">
-              <div class="title-privilege fw-bold fs-5 mt-4">Cơ hội trở thành Đại lý bán hàng</div>
-              <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Mức hoa hồng hấp dẫn, được đào tạo kỹ
+              <div class="title-privilege aver-bold fs-5 mt-4">Cơ hội trở thành Đại lý bán hàng</div>
+              <div class="desc-privilege w-75 fs-5 mt-2 aver-light" style="margin: auto;">Mức hoa hồng hấp dẫn, được đào tạo kỹ
                 năng
                 chuyên nghiệp - bài bản.
               </div>
@@ -271,8 +271,8 @@ const data = [
               </svg>
             </div>
             <div class="desc-wrapper">
-              <div class="title-privilege fw-bold fs-5 mt-4">Tặng vé du lịch miễn phí 100%</div>
-              <div class="desc-privilege w-75 fs-5 mt-2" style="margin: auto;">Trải nghiệm những chuyến du lịch miễn phí
+              <div class="title-privilege aver-bold fs-5 mt-4">Tặng vé du lịch miễn phí 100%</div>
+              <div class="desc-privilege w-75 fs-5 mt-2 aver-light" style="margin: auto;">Trải nghiệm những chuyến du lịch miễn phí
                 hoàn toàn từ Vietnam
                 Tourist.</div>
             </div>
@@ -290,13 +290,13 @@ const data = [
         </div>
 
         <div class="detail-section" style="margin-left: 150px; width: 40%;">
-          <div class="emphasize-text fw-bold fs-1 page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
+          <div class="emphasize-text aver-bold fs-1 page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
 
           <div class="img-section w-25 my-3" v-if="mobileView">
             <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
           </div>
 
-          <div class="description-text mt-3 fw-semibold" style="text-align: justify;">Vietnam Tourist cam kết minh bạch
+          <div class="description-text mt-3" style="text-align: justify; font-size: 18px;">Vietnam Tourist cam kết minh bạch
             tài chính với báo
             cáo chi tiết hàng quý và từng năm, đảm bảo mục tiêu phát triển rõ ràng.
             Đồng hành cùng chúng tôi để gia tăng tài sản bền vừng!
@@ -314,16 +314,16 @@ const data = [
     <div id="representative_section">
       <div class="representative_container w-95 p-70 d-flex align-items-center justify-content-center">
         <div class="commit_container" style="width: 30%;">
-          <div class="title-section fw-semibold fs-4" style="color: #f05083;">Với niềm đam mê khát khao phát triển trong
+          <div class="title-section aver-semi-bold fs-3" style="color: #f05083;">Với niềm đam mê khát khao phát triển trong
             ngành du lịch</div>
 
-          <div class="commit-text fw-semibold fs-1">Vietnam Tourist cam kết luôn đồng hành và tạo nên giá trị cùng quý
+          <div class="commit-text aver-semi-bold fs-1 mt-3">Vietnam Tourist cam kết luôn đồng hành và tạo nên giá trị cùng quý
             cổ đông</div>
           <hr>
 
           <div class="ceo_container d-flex align-items-center">
             <div class="ceo-name">
-              <p class="fw-bold fs-5 m-0" style="color: #005ea0;">Phạm Anh Nhân</p>
+              <p class="aver-bold fs-5 m-0" style="color: #005ea0;">Phạm Anh Nhân</p>
               <p class="m-0">CEO of Vietnam Tourist</p>
             </div>
 

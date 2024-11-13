@@ -40,16 +40,16 @@ export default {
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item me-4">
-                <a class="nav-link fw-bold" aria-current="page" href="#">Lý do nên đầu tư vào Vietnam Tourist</a>
+                <a class="nav-link fw-bold" aria-current="page" href="#reason_section">Lý do nên đầu tư vào Vietnam Tourist</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-bold" href="#">Về chúng tôi</a>
+                <a class="nav-link fw-bold" href="#consultant_section">Về chúng tôi</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-bold" href="#">Ưu điểm khi chọn đầu tư</a>
+                <a class="nav-link fw-bold" href="#benefit_section">Ưu điểm khi chọn đầu tư</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-bold" href="#">Đặc quyền cao cấp dành riêng</a>
+                <a class="nav-link fw-bold" href="#privilege_section">Đặc quyền cao cấp dành riêng</a>
               </li>
             </ul>
           </div>
@@ -167,6 +167,10 @@ export default {
 </template>
 
 <style>
+main {
+  font-family: 'AvertaRegular', sans-serif;
+}
+
 .w-95 {
   width: 95%;
   margin: auto;

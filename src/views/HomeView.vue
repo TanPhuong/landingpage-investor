@@ -1,5 +1,4 @@
 <script setup>
-
 const props = defineProps({
   mobileView: {
     type: Boolean,
@@ -42,10 +41,10 @@ const data = [
     <div class="img-section w-100" v-if="props.mobileView">
       <img src="../assets/images/Pop-up.png" alt="" class="block w-100">
     </div>
-
+ 
     <!-- Form register section -->
     <div id="form-register_section" style="position: relative;">
-      <div class="form-register_wrapper w-95 d-flex justify-content-end" style="position: absolute; top: 20%;">
+      <div class="form-register_wrapper w-95 d-flex justify-content-end" style="position: absolute; top: 10%;">
         <div class="form-register_container" style="width: 40%;">
           <div class="p-4">
             <div class="title-section aver-semi-bold fs-3 mb-4">👉 Đăng ký nhận tư vấn đầu tư!</div>
@@ -379,6 +378,12 @@ const data = [
 </template>
 
 <style scoped>
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /* Form register section */
 #form-register_section {
   height: 80vh;
@@ -514,6 +519,7 @@ tbody tr:last-child {
       display: block !important;
       padding: 30px 0 !important;
       border-bottom: 1px solid #d9d9d9;
+      position: static !important;
     }
 
     & .form-register_container {

@@ -78,7 +78,7 @@ const data = [
               <div class="register-item mb-3">
                 <label for="investmentInput" class="form-label aver-semi-bold">Số tiền dự định đầu tư
                   <span class="text-danger">(*)</span></label>
-                <select name="investmentInput" id="investmentInput" class="form-select form-select-sm input-investor">
+                <select name="investmentInput" id="investmentInput" class="form-select form-select-sm input-investor aver-semi-bold">
                   <option selected>Chọn số tiền dự định đầu tư</option>
                 </select>
               </div>
@@ -87,7 +87,7 @@ const data = [
               <div class="register-item mb-3">
                 <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố
                   <span class="text-danger">(*)</span></label>
-                <select name="cityInput" id="cityInput" class="form-select form-select-sm input-investor">
+                <select name="cityInput" id="cityInput" class="form-select form-select-sm input-investor aver-semi-bold">
                   <option selected class="aver-bold">Chọn Tỉnh/Thành phố</option>
                 </select>
               </div>
@@ -103,7 +103,7 @@ const data = [
     </div>
 
     <!-- Reason section -->
-    <div id="reason_section" class="w-95">
+    <div id="reason_section" class="w-95 section-scroll-margin">
       <div class="reason_container p-70">
         <div class="title-section text-center fs-1 aver-bold page-text-gradient">
           Lý do nên chọn đầu tư vào Vietnam Tourist
@@ -181,7 +181,7 @@ const data = [
     </div>
 
     <!-- Consultant section -->
-    <div id="consultant_section">
+    <div id="consultant_section" class="section-scroll-margin">
       <div class="consultant_container w-95 p-70 d-flex justify-content-around align-items-center">
         <div class="img-section w-25" v-if="!mobileView">
           <img src="../assets/images/Model 2.png" alt="" class="block w-100">
@@ -214,12 +214,12 @@ const data = [
     </div>
 
     <!-- Benefit section -->
-    <div id="benefit_section">
+    <div id="benefit_section" class="section-scroll-margin">
       <div class="w-95 p-70">
-        <div class="title-section text-center fs-1 aver-bold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
+        <div class="title-section page-text-gradient text-center fs-1 aver-bold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
 
         <div class="table-container w-100">
-          <table class="table " style="margin: auto; width: 70%;">
+          <table class="table mb-4" style="margin: auto; width: 70%;">
             <thead>
               <tr>
                 <th scope="col"></th>
@@ -242,7 +242,7 @@ const data = [
     </div>
 
     <!-- Privilege section -->
-    <div id="privilege_section" class="page-gradient-blue">
+    <div id="privilege_section" class="page-gradient-blue section-scroll-margin">
       <div class="w-95 p-70">
         <div class="title-section text-white fs-1 aver-bold text-center">Đặc quyền dành riêng cho cổ đông</div>
 
@@ -384,6 +384,10 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.section-scroll-margin {
+  scroll-margin-top: 80px;
+}
+
 /* Form register section */
 #form-register_section {
   height: 80vh;
@@ -403,17 +407,16 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .input-investor {
+  padding: 12px;
   border: 2px solid #d9d9d9;
   border-radius: 10px;
 }
 
 select.input-investor {
-  padding: 6px 12px;
   font-weight: 500;
 }
 
-Ư .input-investor::placeholder {
-  padding: 4px;
+.input-investor::placeholder {
   font-size: 14px;
   color: #d9d9d9;
   font-weight: 400;
@@ -428,7 +431,8 @@ select.input-investor {
     padding: 15px;
     margin: auto;
     background-color: #feeff4;
-    border: 2px solid #005ea0;
+    /* border: 2px solid #005ea0; */
+    border: 2px solid #0181de;
     border-radius: 20px;
   }
 }

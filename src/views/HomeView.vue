@@ -130,10 +130,8 @@ const data = [
                 </defs>
               </svg>
             </div>
-            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;"><span class="aver-semi-bold">Tăng
-                trưởng tài sản</span> nhanh hơn
-              so với các
-              phương thức khác</div>
+            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;"><span class="aver-semi-bold">Tăng trưởng tài sản</span>
+             nhanh hơn so với các phương thức khác</div>
           </div>
 
           <div class="reason-item w-25">
@@ -161,9 +159,8 @@ const data = [
               </svg>
 
             </div>
-            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tập trung kinh doanh và sự nghiệp mà
-              vẫn <span class="aver-semi-bold">đầu tư
-                hiệu quả</span></div>
+            <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tập trung kinh doanh và sự nghiệp mà vẫn 
+              <span class="aver-semi-bold">đầu tư hiệu quả</span></div>
           </div>
 
           <div class="reason-item w-25">
@@ -175,8 +172,7 @@ const data = [
               </svg>
             </div>
             <div class="description w-75 text-wrap fs-5 mt-4" style="margin: auto;">Tham gia với mức đầu tư thấp <span
-                class="aver-semi-bold">chỉ từ
-                10.000.000đ</span></div>
+                class="aver-semi-bold">chỉ từ 10.000.000đ</span></div>
           </div>
         </div>
       </div>
@@ -384,7 +380,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Form register section */
 #form-register_section {
-  height: 80vh;
+  height: 85vh;
   background-image: url(../assets/images/Banner.png);
   background-size: cover;
   background-repeat: no-repeat;

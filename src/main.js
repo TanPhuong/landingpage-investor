@@ -1,4 +1,5 @@
 // import './assets/main.css'
+import './assets/font.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import bootstrap from 'bootstrap/dist/js/bootstrap.js'
 

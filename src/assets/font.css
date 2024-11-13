@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "AvertaBlack";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-Black_1.otf');
+}
+
+.aver-black {
+    font-family: "AvertaBlack" !important;
+}
+
+@font-face {
+    font-family: "AvertaBlackItalic";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-BlackItalic_1.otf');
+}
+
+.aver-black-italic {
+    font-family: "AvertaBlackItalic" !important;
+}
+
+@font-face {
+    font-family: "AvertaBold";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-Bold_1.otf');
+}
+
+.aver-bold {
+    font-family: "AvertaBold" !important;
+}
+
+@font-face {
+    font-family: "AvertaBoldItalic";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-BoldItalic_1.otf');
+}
+
+.aver-bold-italic {
+    font-family: "AvertaBoldItalic" !important;
+}
+
+@font-face {
+    font-family: "AvertaExtrabold";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-Extrabold_1.otf');
+}
+
+.aver-extra-bold {
+    font-family: "AvertaExtrabold" !important;
+}
+
+@font-face {
+    font-family: "AvertaExtraBoldItalic";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-ExtraboldItalic_1.otf');
+}
+
+.aver-extra-bold-italic {
+    font-family: "AvertaExtraBoldItalic" !important;
+}
+
+@font-face {
+    font-family: "AvertaLight";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-Light_1.otf');
+}
+
+.aver-light {
+    font-family: "AvertaLight" !important;
+}
+
+@font-face {
+    font-family: "AvertaLightItalic";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-LightItalic_1.otf');
+}
+
+.aver-light-italic {
+    font-family: "AvertaLightItalic" !important;
+}
+
+@font-face {
+    font-family: "AvertaRegular";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-Regular_3.otf');
+}
+
+.aver-regular {
+    font-family: "AvertaRegular" !important;
+}
+
+@font-face {
+    font-family: "AvertaRegularItalic";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-RegularItalic_1.otf');
+}
+
+.aver-regular-italic {
+    font-family: "AvertaRegularItalic" !important;
+}
+
+@font-face {
+    font-family: "AvertaSemibold";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-Semibold_1.otf');
+}
+
+.aver-semi-bold {
+    font-family: "AvertaSemibold" !important;
+}
+
+@font-face {
+    font-family: "AvertaSemiboldItalic";
+    src: url('../assets/fonts/Intelligent\ Design\ -\ AvertaStdCY-SemiboldItalic_1.otf');
+}
+
+.aver-semi-bold-italic {
+    font-family: "AvertaSemiboldItalic" !important;
+}
+

@@ -312,7 +312,7 @@ const data = [
         </div>
 
         <div class="detail-section" style="margin-left: 150px; width: 40%;">
-          <div class="emphasize-text aver-bold fs-1 page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
+          <div class="title-section aver-bold fs-1 page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
 
           <div class="img-section w-25 my-3" v-if="mobileView">
             <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
@@ -504,11 +504,14 @@ tbody tr:last-child {
   left: 7%;
 }
 
+
+
 @media (max-width: 1024px) {
 
   .title-section {
     width: 80%;
     margin: auto;
+    text-align: center;
   }
 
   #form-register_section {

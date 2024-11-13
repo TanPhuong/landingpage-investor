@@ -85,7 +85,7 @@ export default {
         <div class="text" style="font-size: 14px;">Đầu trang</div>
       </div>
 
-      <div class="p-70" style="width: 85%; margin: auto;">
+      <div class="contact_wrapper p-70" style="width: 85%; margin: auto;">
         <div class="contact_container d-flex" style="padding-bottom: 50px;">
           <div class="firm_container">
 
@@ -257,6 +257,18 @@ header {
 
   .page-btn {
     font-size: 16px;
+  }
+
+  footer .contact_wrapper {
+    width: 90% !important;
+
+    & .title {
+      font-size: 16px !important;
+    }
+
+    & .firm-items_container, .contact-items_container {
+      font-size: 14px !important;
+    }
   }
 
   footer .fin_container {

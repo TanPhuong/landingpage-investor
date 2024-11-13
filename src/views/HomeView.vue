@@ -47,7 +47,7 @@ const data = [
       <div class="form-register_wrapper w-95 d-flex justify-content-end" style="position: absolute; top: 10%;">
         <div class="form-register_container" style="width: 40%;">
           <div class="p-4">
-            <div class="title-section aver-semi-bold fs-3 mb-4">👉 Đăng ký nhận tư vấn đầu tư!</div>
+            <div class="title-section aver-semi-bold fs-3 mb-4 ">👉 <span class="page-text-gradient">Đăng ký nhận tư vấn đầu tư!</span></div>
 
             <form action="submit">
               <!-- Name input -->
@@ -103,7 +103,7 @@ const data = [
     </div>
 
     <!-- Reason section -->
-    <div id="reason_section" class="w-95 section-scroll-margin">
+    <div id="reason_section" class="w-95 section-scroll-margin m-70">
       <div class="reason_container p-70">
         <div class="title-section text-center fs-1 aver-bold page-text-gradient">
           Lý do nên chọn đầu tư vào Vietnam Tourist
@@ -214,7 +214,7 @@ const data = [
     </div>
 
     <!-- Benefit section -->
-    <div id="benefit_section" class="section-scroll-margin">
+    <div id="benefit_section" class="section-scroll-margin m-70">
       <div class="w-95 p-70">
         <div class="title-section page-text-gradient text-center fs-1 aver-bold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
 
@@ -223,7 +223,7 @@ const data = [
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col" class="py-4">Gửi tiết kiệm thông thường</th>
+                <th scope="col" class="py-4 fs-5">Gửi tiết kiệm thông thường</th>
                 <th scope="col" class="py-4 ps-4 page-gradient-pink text-white fs-5 text-wrap"
                   style="border-radius: 25px 25px 0 0;">Đầu tư vào quỹ Vietnam Tourist</th>
               </tr>
@@ -231,9 +231,9 @@ const data = [
 
             <tbody>
               <tr v-for="(item, index) in data" :key="index">
-                <th scope="row" class="py-4 ps-4">{{ item.title }}</th>
-                <td class="py-4">{{ item.economicDetail }}</td>
-                <td class="investment-item py-4 ps-4 page-gradient-pink text-white">{{ item.invesmentDetail }}</td>
+                <th scope="row" class="py-4 ps-4 fs-5">{{ item.title }}</th>
+                <td class="py-4 fs-5">{{ item.economicDetail }}</td>
+                <td class="investment-item py-4 ps-4 page-gradient-pink text-white fs-5">{{ item.invesmentDetail }}</td>
               </tr>
             </tbody>
           </table>
@@ -242,7 +242,7 @@ const data = [
     </div>
 
     <!-- Privilege section -->
-    <div id="privilege_section" class="page-gradient-blue section-scroll-margin">
+    <div id="privilege_section" class="page-gradient-blue section-scroll-margin p-70">
       <div class="w-95 p-70">
         <div class="title-section text-white fs-1 aver-bold text-center">Đặc quyền dành riêng cho cổ đông</div>
 
@@ -544,6 +544,8 @@ tbody tr:last-child {
 
 
   #reason_section {
+    margin-top: 30px;
+    margin-bottom: 0 !important;
 
     & .reason_container {
       padding-top: 0 !important;
@@ -586,10 +588,14 @@ tbody tr:last-child {
   }
 
   #benefit_section {
+    margin: 0 !important;
 
     & .table-container table {
       width: 100% !important;
-      font-size: 14px !important;
+
+      & thead th, tbody th, tbody td {
+        font-size: 14px !important;
+      }
 
       & tr th:last-child {
         font-size: 16px !important;
@@ -603,6 +609,7 @@ tbody tr:last-child {
   }
 
   #privilege_section {
+    padding: 0 !important;
 
     & .privilege-item_container {
       display: flex !important;

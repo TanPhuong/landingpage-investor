@@ -77,13 +77,13 @@ export default {
     <footer style="background-color: #f7f7f7; position: relative;" >
 
       <div class="return-top_container d-flex flex-column justify-content-center align-items-center" @click="backToTop">
-        <svg width="40%" height="40%" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="30%" height="30%" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g opacity="0.7">
             <path fill="#606060"
               d="M26.0002 15.6569V40H22.0002V15.6569L11.2723 26.3848L8.44385 23.5564L24.0002 8L39.5566 23.5564L36.7282 26.3848L26.0002 15.6569Z" />
           </g>
         </svg>
-        <div class="text">Đầu trang</div>
+        <div class="text" style="font-size: 14px;">Đầu trang</div>
       </div>
 
       <div class="p-70" style="width: 85%; margin: auto;">
@@ -149,7 +149,7 @@ export default {
           </div>
 
           <div class="company-information">
-            <div class="company-title text-uppercase fs-3 fw-medium" style="color: #005ea0;">Công ty CP Thương mại và
+            <div class="company-title text-uppercase fs-3 aver-bold page-text-gradient">Công ty CP Thương mại và
               dịch vụ du lịch Vietnam Tourist</div>
             <div class="information_container d-flex mt-2">
               <div class="infor-item pe-3">
@@ -209,7 +209,7 @@ main {
 }
 
 .m-70 {
-  margin: 70px 0;
+  margin: 70px auto;
 }
 
 .p-70 {
@@ -242,14 +242,14 @@ header {
 }
 
 .return-top_container {
-  width: 100px;
-  height: 140px;
+  width: 90px;
+  height: 110px;
   cursor: pointer;
   border-radius: 40%;
   color: #606060;
   background-color: #e6e6e6; 
   position: absolute;
-  top: -10%;
+  top: -8%;
   right: 5%;
 }
 

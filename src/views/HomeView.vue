@@ -1,4 +1,12 @@
 <script setup>
+
+const props = defineProps({
+  mobileView: {
+    type: Boolean,
+    required: true
+  }
+})
+
 const data = [
   {
     title: "Lợi nhuận",
@@ -32,14 +40,19 @@ const data = [
   <main>
     <!-- Form register section -->
     <div id="form-register_section">
-      <div class="w-95 d-flex justify-content-end" style="padding: 180px 0;">
+      <div class="form-register_wrapper w-95 d-flex justify-content-end" style="padding: 180px 0;">
+
+        <div class="img-section" v-if="props.mobileView">
+          <img src="" alt="">
+        </div>
+
         <div class="form-register_container" style="width: 40%;">
           <div class="p-4">
             <div class="title-section fw-semibold fs-3 mb-4">👉 Đăng ký nhận tư vấn đầu tư!</div>
 
             <form action="submit">
               <!-- Name input -->
-              <div class="mb-3">
+              <div class="register-item mb-3">
                 <label for="nameInput" class="form-label fw-semibold">Họ và tên
                   <span class="text-danger">(*)</span></label>
                 <input type="text" class="form-control input-investor" id="nameInput"
@@ -47,14 +60,14 @@ const data = [
               </div>
 
               <!-- phone and email input -->
-              <div class="mb-3 row">
-                <div class="col-6">
+              <div class="register-item_wrapper mb-3 row">
+                <div class="register-item col-6">
                   <label for="phoneInput" class="form-label fw-semibold">Số điện thoại
                     <span class="text-danger">(*)</span></label>
                   <input type="number" class="form-control input-investor" id="phoneInput"
                     placeholder="Nhập số điện thoại của bạn">
                 </div>
-                <div class="col-6">
+                <div class="register-item col-6">
                   <label for="emailInput" class="form-label fw-semibold">Email
                     <span class="text-danger">(*)</span></label>
                   <input type="email" class="form-control input-investor" id="emailInput"
@@ -63,7 +76,7 @@ const data = [
               </div>
 
               <!-- investment -->
-              <div class="mb-3">
+              <div class="register-item mb-3">
                 <label for="investmentInput" class="form-label fw-semibold">Số tiền dự định đầu tư
                   <span class="text-danger">(*)</span></label>
                 <select name="investmentInput" id="investmentInput" class="form-select form-select-sm input-investor">
@@ -72,7 +85,7 @@ const data = [
               </div>
 
               <!-- city -->
-              <div class="mb-3">
+              <div class="register-item mb-3">
                 <label for="cityInput" class="form-label fw-semibold">Tỉnh/Thành phố
                   <span class="text-danger">(*)</span></label>
                 <select name="cityInput" id="cityInput" class="form-select form-select-sm input-investor">
@@ -442,7 +455,21 @@ tbody tr:last-child {
 @media (max-width: 1024px) {
 
   #form-register_section {
+    background: none !important;
+
+    & .form-register_wrapper {
+      padding: 50px 0 !important;
+    }
     
+    & .form-register_container {
+      width: 100% !important;
+
+      & .register-item {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+    }
   }
 
 

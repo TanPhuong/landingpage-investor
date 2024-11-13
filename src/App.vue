@@ -65,7 +65,7 @@ export default {
     </header>
 
     <!-- Body part -->
-    <HomeView />
+    <HomeView :mobileView="mobileView"/>
 
     <footer style="background-color: #f7f7f7;">
       <div class="p-70" style="width: 85%; margin: auto;">

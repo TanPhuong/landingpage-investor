@@ -46,17 +46,17 @@ export default {
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="width: 65%;">
             <ul class="navbar-nav">
               <li class="nav-item me-4">
-                <a class="nav-link fw-bold" aria-current="page" href="#reason_section">Lý do nên đầu tư vào Vietnam
+                <a class="nav-link aver-extra-bold" aria-current="page" href="#reason_section">Lý do nên đầu tư vào Vietnam
                   Tourist</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-bold" href="#consultant_section">Về chúng tôi</a>
+                <a class="nav-link aver-extra-bold" href="#consultant_section">Về chúng tôi</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-bold" href="#benefit_section">Ưu điểm khi chọn đầu tư</a>
+                <a class="nav-link aver-extra-bold" href="#benefit_section">Ưu điểm khi chọn đầu tư</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link fw-bold" href="#privilege_section">Đặc quyền cao cấp dành riêng</a>
+                <a class="nav-link aver-extra-bold" href="#privilege_section">Đặc quyền cao cấp dành riêng</a>
               </li>
             </ul>
           </div>
@@ -90,7 +90,7 @@ export default {
         <div class="contact_container d-flex" style="padding-bottom: 50px;">
           <div class="firm_container">
 
-            <div class="title fw-bold fs-5">Điều khoản</div>
+            <div class="title aver-bold fs-5">Điều khoản</div>
             <div class="firm-items_container mt-4">
               <div class="firm-item mb-2">Nội quy</div>
               <div class="firm-item">Chính sách bảo mật</div>
@@ -99,7 +99,7 @@ export default {
           </div>
 
           <div class="contact_container ms-5">
-            <div class="title fw-bold fs-5">Kết nối</div>
+            <div class="title aver-bold fs-5">Kết nối</div>
 
             <div class="contact-items_container mt-4">
               <div class="contact-item media_container d-flex mb-2">

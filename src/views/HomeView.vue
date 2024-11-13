@@ -106,7 +106,7 @@ const data = [
 
     <!-- Reason section -->
     <div id="reason_section" class="w-95">
-      <div class="p-70">
+      <div class="reason_container p-70">
         <div class="title-section text-center fs-1 aver-semi-bold page-text-gradient">
           Lý do nên chọn đầu tư vào Vietnam Tourist
         </div>
@@ -385,7 +385,7 @@ const data = [
   height: 80vh;
   background-image: url(../assets/images/Banner.png);
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: left center;
 
   & .form-register_container {
@@ -536,9 +536,17 @@ tbody tr:last-child {
 
   #reason_section {
 
+    & .reason_container {
+      padding-top: 0 !important;
+    }
+
     & .reason-item_container .reason-item {
       width: 50% !important;
-      margin-top: 10px;
+      margin-top: 30px;
+
+      & .description {
+        font-size: 16px !important;
+      }
     }
   }
 

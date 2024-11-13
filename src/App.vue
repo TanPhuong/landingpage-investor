@@ -44,10 +44,9 @@ export default {
           </a>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="width: 65%;">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" style="font-size: 18px;">
               <li class="nav-item me-4">
-                <a class="nav-link aver-extra-bold" aria-current="page" href="#reason_section">Lý do nên đầu tư vào Vietnam
-                  Tourist</a>
+                <a class="nav-link aver-extra-bold" aria-current="page" href="#reason_section">Lý do nên đầu tư vào Vietnam Tourist</a>
               </li>
               <li class="nav-item me-4">
                 <a class="nav-link aver-extra-bold" href="#consultant_section">Về chúng tôi</a>
@@ -231,6 +230,7 @@ header {
 
 .page-btn {
   padding: 12px 25px;
+  font-size: 18px;
   background: linear-gradient(#f0578a, #f03d6f);
   color: #fff;
   border-radius: 15px;
@@ -254,6 +254,10 @@ header {
 }
 
 @media (max-width: 1024px) {
+
+  .page-btn {
+    font-size: 16px;
+  }
 
   footer .fin_container {
     display: block !important;

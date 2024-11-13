@@ -41,7 +41,7 @@ const data = [
     <div class="img-section w-100" v-if="props.mobileView">
       <img src="../assets/images/Pop-up.png" alt="" class="block w-100">
     </div>
- 
+
     <!-- Form register section -->
     <div id="form-register_section" style="position: relative;">
       <div class="form-register_wrapper w-95 d-flex justify-content-end" style="position: absolute; top: 10%;">
@@ -78,7 +78,8 @@ const data = [
               <div class="register-item mb-3">
                 <label for="investmentInput" class="form-label aver-semi-bold">Số tiền dự định đầu tư
                   <span class="text-danger">(*)</span></label>
-                <select name="investmentInput" id="investmentInput" class="form-select form-select-sm input-investor aver-semi-bold">
+                <select name="investmentInput" id="investmentInput"
+                  class="form-select form-select-sm input-investor aver-semi-bold">
                   <option selected>Chọn số tiền dự định đầu tư</option>
                 </select>
               </div>
@@ -87,7 +88,8 @@ const data = [
               <div class="register-item mb-3">
                 <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố
                   <span class="text-danger">(*)</span></label>
-                <select name="cityInput" id="cityInput" class="form-select form-select-sm input-investor aver-semi-bold">
+                <select name="cityInput" id="cityInput"
+                  class="form-select form-select-sm input-investor aver-semi-bold">
                   <option selected class="aver-bold">Chọn Tỉnh/Thành phố</option>
                 </select>
               </div>
@@ -189,19 +191,16 @@ const data = [
 
         <div class="detail-section" style="width: 40%;">
           <div class="intro-container">
-            <div class="title-section aver-semi-bold fs-4" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
-            <div class="emphasize-text aver-bold fs-1 page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
+            <div class="aver-semi-bold fs-4" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
+            <div class="title-section aver-bold fs-1 page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
           </div>
 
           <div class="img-section w-25 my-3" v-if="mobileView">
             <img src="../assets/images/Model 2.png" alt="" class="block w-100">
           </div>
 
-          <div class="description-text mt-2" style="text-align: justify; font-size: 18px;">Kênh đầu tư Vietnam Tourist
-            là quỹ
-            đầu tư được
-            thành lập bởi Công ty Cổ phần
-            Thương mại và Dịch vụ Vietnam Tourist được thành lập năm 2017,
+          <div class="description-text mt-2" style="text-align: justify; font-size: 18px;">Kênh đầu tư Vietnam Tourist là quỹ
+            đầu tư được thành lập bởi Công ty Cổ phần Thương mại và Dịch vụ Vietnam Tourist được thành lập năm 2017,
             là một trong những doanh nghiệp lữ hành hàng đầu tại Việt Nam với mạng lưới chi nhánh trên toàn quốc, chuyên
             tổ chức tour trong nước, quốc tế</div>
 
@@ -216,7 +215,8 @@ const data = [
     <!-- Benefit section -->
     <div id="benefit_section" class="section-scroll-margin m-70">
       <div class="w-95 p-70">
-        <div class="title-section page-text-gradient text-center fs-1 aver-bold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
+        <div class="title-section page-text-gradient text-center fs-1 aver-bold mb-5">Ưu điểm khi đầu tư Vietnam Tourist
+        </div>
 
         <div class="table-container w-100">
           <table class="table mb-4" style="margin: auto; width: 70%;">
@@ -322,10 +322,8 @@ const data = [
             <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
           </div>
 
-          <div class="description-text mt-3" style="text-align: justify; font-size: 18px;">Vietnam Tourist cam kết minh
-            bạch
-            tài chính với báo
-            cáo chi tiết hàng quý và từng năm, đảm bảo mục tiêu phát triển rõ ràng.
+          <div class="description-text mt-3" style="text-align: justify; font-size: 18px;">Vietnam Tourist cam kết minh bạch
+            tài chính với báo cáo chi tiết hàng quý và từng năm, đảm bảo mục tiêu phát triển rõ ràng.
             Đồng hành cùng chúng tôi để gia tăng tài sản bền vừng!
           </div>
 
@@ -341,13 +339,9 @@ const data = [
     <div id="representative_section">
       <div class="representative_container w-95 p-70 d-flex align-items-center justify-content-center">
         <div class="commit_container" style="width: 30%;">
-          <div class="title-section aver-semi-bold fs-3" style="color: #f05083;">Với niềm đam mê khát khao phát triển
-            trong
-            ngành du lịch</div>
+          <div class="aver-semi-bold fs-3" style="color: #f05083;">Với niềm đam mê khát khao phát triển trong ngành du lịch</div>
 
-          <div class="commit-text aver-bold fs-1 mt-3">Vietnam Tourist cam kết luôn đồng hành và tạo nên giá trị
-            cùng quý
-            cổ đông</div>
+          <div class="commit-text aver-bold fs-1 mt-3">Vietnam Tourist cam kết luôn đồng hành và tạo nên giá trị cùng quý cổ đông</div>
           <hr>
 
           <div class="ceo_container d-flex align-items-center">
@@ -516,6 +510,11 @@ tbody tr:last-child {
 
 @media (max-width: 1024px) {
 
+  .title-section {
+    width: 80%;
+    margin: auto;
+  }
+
   #form-register_section {
     background: none !important;
 
@@ -593,7 +592,9 @@ tbody tr:last-child {
     & .table-container table {
       width: 100% !important;
 
-      & thead th, tbody th, tbody td {
+      & thead th,
+      tbody th,
+      tbody td {
         font-size: 14px !important;
       }
 
@@ -666,10 +667,6 @@ tbody tr:last-child {
       & .detail-section {
         width: 100% !important;
         margin-left: 0 !important;
-
-        & .emphasize-text {
-          text-align: center;
-        }
 
         & .btn-container {
           display: flex;

@@ -19,6 +19,12 @@ export default {
       } else {
         this.mobileView = false;
       }
+    },
+    backToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
     }
   },
   created() {
@@ -33,14 +39,15 @@ export default {
     <header class="w-100 bg-light">
       <nav class="navbar navbar-expand-lg w-95" v-if="!mobileView">
         <div class="container-fluid p-0">
-          <a class="navbar-brand" href="#">
-            <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block" style="width: 20%;">
+          <a class="navbar-brand" href="#" style="width: 35%;">
+            <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block" style="width: 30%;">
           </a>
 
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="width: 65%;">
             <ul class="navbar-nav">
               <li class="nav-item me-4">
-                <a class="nav-link fw-bold" aria-current="page" href="#reason_section">Lý do nên đầu tư vào Vietnam Tourist</a>
+                <a class="nav-link fw-bold" aria-current="page" href="#reason_section">Lý do nên đầu tư vào Vietnam
+                  Tourist</a>
               </li>
               <li class="nav-item me-4">
                 <a class="nav-link fw-bold" href="#consultant_section">Về chúng tôi</a>
@@ -54,7 +61,7 @@ export default {
             </ul>
           </div>
 
-          <div class="btn-container">
+          <div class="btn-container" style="width: 10%;">
             <button class="page-btn">Đăng ký tư vấn</button>
           </div>
 
@@ -65,9 +72,20 @@ export default {
     </header>
 
     <!-- Body part -->
-    <HomeView :mobileView="mobileView"/>
+    <HomeView :mobileView="mobileView" />
 
-    <footer style="background-color: #f7f7f7;">
+    <footer style="background-color: #f7f7f7; position: relative;" >
+
+      <div class="return-top_container d-flex flex-column justify-content-center align-items-center" @click="backToTop">
+        <svg width="40%" height="40%" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.7">
+            <path fill="#606060"
+              d="M26.0002 15.6569V40H22.0002V15.6569L11.2723 26.3848L8.44385 23.5564L24.0002 8L39.5566 23.5564L36.7282 26.3848L26.0002 15.6569Z" />
+          </g>
+        </svg>
+        <div class="text">Đầu trang</div>
+      </div>
+
       <div class="p-70" style="width: 85%; margin: auto;">
         <div class="contact_container d-flex" style="padding-bottom: 50px;">
           <div class="firm_container">
@@ -223,6 +241,18 @@ header {
   box-shadow: 0 0 8px #f05083;
 }
 
+.return-top_container {
+  width: 100px;
+  height: 140px;
+  cursor: pointer;
+  border-radius: 40%;
+  color: #606060;
+  background-color: #e6e6e6; 
+  position: absolute;
+  top: -10%;
+  right: 5%;
+}
+
 @media (max-width: 1024px) {
 
   footer .fin_container {
@@ -248,6 +278,13 @@ header {
         }
       }
     }
+  }
+
+  .return-top_container {
+    width: 80px;
+    height: 100px;
+    font-size: 12px;
+    top: -5%;
   }
 }
 </style>

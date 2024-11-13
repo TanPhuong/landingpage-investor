@@ -38,13 +38,14 @@ const data = [
 
 <template>
   <main>
+
+    <div class="img-section w-100" v-if="props.mobileView">
+      <img src="../assets/images/Pop-up.png" alt="" class="block w-100">
+    </div>
+
     <!-- Form register section -->
     <div id="form-register_section">
       <div class="form-register_wrapper w-95 d-flex justify-content-end" style="padding: 180px 0;">
-
-        <div class="img-section" v-if="props.mobileView">
-          <img src="" alt="">
-        </div>
 
         <div class="form-register_container" style="width: 40%;">
           <div class="p-4">
@@ -168,7 +169,7 @@ const data = [
     <!-- Consultant section -->
     <div id="consultant_section">
       <div class="consultant_container w-95 p-70 d-flex justify-content-around align-items-center">
-        <div class="img-section w-25">
+        <div class="img-section w-25" v-if="!mobileView">
           <img src="../assets/images/Model 2.png" alt="" class="block w-100">
         </div>
 
@@ -176,6 +177,10 @@ const data = [
           <div class="intro-container">
             <div class="title-section fw-semibold fs-4" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
             <div class="emphasize-text fw-bold fs-1 page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
+          </div>
+
+          <div class="img-section w-25 my-3" v-if="mobileView">
+            <img src="../assets/images/Model 2.png" alt="" class="block w-100">
           </div>
 
           <div class="description-text fw-semibold mt-2" style="text-align: justify;">Kênh đầu tư Vietnam Tourist là quỹ
@@ -198,7 +203,6 @@ const data = [
       <div class="w-95 p-70">
         <div class="title-section text-center fs-1 fw-semibold mb-5">Ưu điểm khi đầu tư Vietnam Tourist</div>
 
-        <!-- Adjust the color -->
         <div class="table-container w-100">
           <table class="table " style="margin: auto; width: 70%;">
             <thead>
@@ -280,12 +284,17 @@ const data = [
     <!-- Growth section -->
     <div id="growth_section">
       <div class="growth_container w-95 d-flex justify-content-center align-items-center" style="padding-top: 100px;">
-        <div class="img-section w-25">
+
+        <div class="img-section w-25" v-if="!mobileView">
           <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
         </div>
 
         <div class="detail-section" style="margin-left: 150px; width: 40%;">
           <div class="emphasize-text fw-bold fs-1 page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
+
+          <div class="img-section w-25 my-3" v-if="mobileView">
+            <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
+          </div>
 
           <div class="description-text mt-3 fw-semibold" style="text-align: justify;">Vietnam Tourist cam kết minh bạch
             tài chính với báo
@@ -327,7 +336,7 @@ const data = [
         <div class="ceo-portrait text-center position-relative" style="width: 40%;">
           <img src="../assets/images/ceo.jpg" alt="" class="w-75 block" style="border-radius: 15%;">
 
-          <div class="weird-div fs-1 position-absolute rounded-circle page-gradient-blue">
+          <div class="weird-div fs-1 position-absolute rounded-circle page-gradient-blue" v-if="!mobileView">
             <svg xmlns="http://www.w3.org/2000/svg" width="75%" height="75%" viewBox="0 0 20 20">
               <path fill="#fff"
                 d="m7 6l1-2H6C3.79 4 2 6.79 2 9v7h7V9H5c0-3 2-3 2-3m7 3c0-3 2-3 2-3l1-2h-2c-2.21 0-4 2.79-4 5v7h7V9z" />
@@ -458,16 +467,23 @@ tbody tr:last-child {
     background: none !important;
 
     & .form-register_wrapper {
-      padding: 50px 0 !important;
+      display: block !important;
+      padding: 30px 0 !important;
+      border-bottom: 1px solid #d9d9d9;
     }
-    
+
     & .form-register_container {
       width: 100% !important;
+
+      & .register-item_wrapper {
+        margin-bottom: 0 !important;
+      }
 
       & .register-item {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
+        margin-bottom: 15px !important;
       }
     }
   }
@@ -486,14 +502,11 @@ tbody tr:last-child {
 
     & .detail-section {
       width: 100% !important;
-      position: relative;
     }
 
     & .img-section {
       width: 100% !important;
       text-align: center;
-      margin-top: 70px;
-      padding: 50px;
 
       & img {
         width: 80% !important;
@@ -502,8 +515,6 @@ tbody tr:last-child {
 
     & .intro-container {
       text-align: center;
-      position: absolute;
-      top: -200%;
     }
 
     & .btn-container {
@@ -517,6 +528,11 @@ tbody tr:last-child {
     & .table-container table {
       width: 100% !important;
       font-size: 14px !important;
+
+      & tr th:last-child {
+        font-size: 16px !important;
+        padding: 24px 10px !important;
+      }
 
       & .investment-item {
         padding: 24px 10px !important;
@@ -561,33 +577,36 @@ tbody tr:last-child {
     }
   }
 
-  #growth_section .growth_container {
-    display: block !important;
+  #growth_section {
+    background: none !important;
+    background-color: #f1f9ff !important;
 
-    & .img-section {
-      width: 100% !important;
-      text-align: center;
+    & .growth_container {
+      display: block !important;
+      padding: 50px 0 !important;
 
-      & img {
-        width: 80% !important;
-        padding: 25px
-      }
-    }
-
-    & .detail-section {
-      width: 100% !important;
-      margin-left: 0 !important;
-      position: relative;
-
-      & .emphasize-text {
-        position: absolute;
-        top: -300%;
+      & .img-section {
+        width: 100% !important;
         text-align: center;
+
+        & img {
+          width: 80% !important;
+          padding: 25px
+        }
       }
 
-      & .btn-container {
-        display: flex;
-        justify-content: center;
+      & .detail-section {
+        width: 100% !important;
+        margin-left: 0 !important;
+
+        & .emphasize-text {
+          text-align: center;
+        }
+
+        & .btn-container {
+          display: flex;
+          justify-content: center;
+        }
       }
     }
   }
@@ -617,10 +636,6 @@ tbody tr:last-child {
 
       & img {
         width: 90% !important;
-      }
-
-      & .weird-div {
-        display: none !important;
       }
     }
   }

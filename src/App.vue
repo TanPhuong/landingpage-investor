@@ -34,7 +34,7 @@ export default {
       <nav class="navbar navbar-expand-lg w-95" v-if="!mobileView">
         <div class="container-fluid p-0">
           <a class="navbar-brand" href="#">
-            <img src="./assets/images/logo-company.jpg" alt="Logo" class="w-75">
+            <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block" style="width: 20%;">
           </a>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -127,7 +127,7 @@ export default {
 
         <div class="fin_container d-flex align-items-center" style="padding-top: 50px;">
           <div class="img-wrapper" style="width: 40%;">
-            <img src="./assets/images/logo-company.jpg" alt="">
+            <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block w-50">
           </div>
 
           <div class="company-information">
@@ -220,20 +220,17 @@ header {
 }
 
 @media (max-width: 1024px) {
-  main {
-    overflow: hidden;
-  }
-
-  header {
-    padding: 10px 0;
-  }
-
-  .page-btn {
-    padding: 6px 12px;
-  }
 
   footer .fin_container {
     display: block !important;
+
+    & .img-wrapper {
+      width: 60% !important;
+
+      & img {
+        width: 100% !important;
+      }
+    }
 
     & .company-information {
       margin-top: 20px;

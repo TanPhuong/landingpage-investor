@@ -1,15 +1,14 @@
 <template>
-
     <nav class="navbar w-95">
         <div class="container-fluid p-0">
             <!-- Logo -->
             <a class="navbar-brand w-25" href="#">
-                <img src="../assets/images/logo-company.jpg" alt="Logo" class="w-100">
+                <img src="../assets/images/logo-transparent-2.png" alt="Logo" class="w-100">
             </a>
 
             <div class="d-flex align-items-center" style="width: auto;">
                 <div class="btn-container me-3">
-                    <button class="page-btn">Đăng ký tư vấn</button>
+                    <button class="page-btn" style="font-size: 14px;">Đăng ký tư vấn</button>
                 </div>
     
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"

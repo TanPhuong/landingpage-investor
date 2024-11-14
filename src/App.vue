@@ -39,8 +39,8 @@ export default {
     <header class="w-100 bg-light">
       <nav class="navbar navbar-expand-lg w-95" v-if="!mobileView">
         <div class="container-fluid p-0">
-          <a class="navbar-brand" href="#" style="width: 35%;">
-            <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block" style="width: 30%;">
+          <a class="navbar-brand" href="#" style="width: 8%;">
+            <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block w-100">
           </a>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="width: 65%;">
@@ -252,6 +252,13 @@ header {
   top: -8%;
   right: 5%;
 }
+
+@media (min-width: 1024px) and  (max-width: 1920px) {
+  ul {
+    font-size: 16px !important;
+  }
+}
+
 
 @media (max-width: 1024px) {
 

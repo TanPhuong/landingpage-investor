@@ -47,7 +47,7 @@ const data = [
       <div class="form-register_wrapper w-95 d-flex justify-content-end" style="position: absolute; top: 10%;">
         <div class="form-register_container" style="width: 40%;">
           <div class="p-4">
-            <div class="title-section aver-semi-bold fs-3 mb-4 ">👉 <span class="page-text-gradient">Đăng ký nhận tư vấn đầu tư!</span></div>
+            <div class="aver-semi-bold fs-3 mb-4 ">👉 <span class="page-text-gradient">Đăng ký nhận tư vấn đầu tư!</span></div>
 
             <form action="submit">
               <!-- Name input -->
@@ -181,7 +181,7 @@ const data = [
     <!-- Consultant section -->
     <div id="consultant_section" class="section-scroll-margin">
       <div class="consultant_container w-95 p-70 d-flex justify-content-around align-items-center">
-        <div class="img-section w-25" v-if="!mobileView">
+        <div class="img-section w-25" v-if="!props.mobileView">
           <img src="../assets/images/Model 2.png" alt="" class="block w-100">
         </div>
 
@@ -191,7 +191,7 @@ const data = [
             <div class="title-section aver-bold fs-1 page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
           </div>
 
-          <div class="img-section w-25 my-3" v-if="mobileView">
+          <div class="img-section w-25 my-3" v-if="props.mobileView">
             <img src="../assets/images/Model 2.png" alt="" class="block w-100">
           </div>
 
@@ -307,14 +307,14 @@ const data = [
     <div id="growth_section">
       <div class="growth_container w-95 d-flex justify-content-center align-items-center" style="padding-top: 100px;">
 
-        <div class="img-section w-25" v-if="!mobileView">
+        <div class="img-section w-25" v-if="!props.mobileView">
           <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
         </div>
 
         <div class="detail-section" style="margin-left: 150px; width: 40%;">
           <div class="title-section aver-bold fs-1 page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
 
-          <div class="img-section w-25 my-3" v-if="mobileView">
+          <div class="img-section w-25 my-3" v-if="props.mobileView">
             <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
           </div>
 

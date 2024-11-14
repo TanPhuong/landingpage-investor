@@ -12,12 +12,12 @@
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="border: none;">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
+                    aria-labelledby="offcanvasNavbarLabel" style="height: 100vh;">
                     <div class="offcanvas-header">
 
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

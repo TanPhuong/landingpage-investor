@@ -71,12 +71,12 @@
 }
 
 @font-face {
-    font-family: "AvertaRegular";
+    font-family: 'AvertaRegular';
     src: url('../assets/fonts/Intelligent Design - AvertaStdCY-Regular_3.otf') format('opentype');
 }
 
 .aver-regular {
-    font-family: "AvertaRegular", sans-serif !important;
+    font-family: 'AvertaRegular', sans-serif !important;
 }
 
 @font-face {

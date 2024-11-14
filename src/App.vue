@@ -36,31 +36,31 @@ export default {
 
 <template>
   <main>
-    <header class="w-100 bg-light">
-      <nav class="navbar navbar-expand-lg w-95" v-if="!mobileView">
+    <header class="w-100 bg-light d-flex">
+      <nav class="navbar navbar-expand-lg w-95 p-0" v-if="!mobileView">
         <div class="container-fluid p-0">
-          <a class="navbar-brand" href="#" style="width: 8%;">
-            <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block w-100">
+          <a class="navbar-brand m-0 p-0" href="#" style="width: 15%;">
+            <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block w-100" style=" max-height: 60px; max-width: 180px; object-fit: cover;">
           </a>
 
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="width: 65%;">
-            <ul class="navbar-nav" style="font-size: 18px;">
+            <ul class="navbar-nav" style="font-size: 14px;">
               <li class="nav-item me-4">
-                <a class="nav-link aver-extra-bold" aria-current="page" href="#reason_section">Lý do nên đầu tư vào Vietnam Tourist</a>
+                <a class="nav-link aver-semi-bold" aria-current="page" href="#reason_section">Lý do nên đầu tư vào Vietnam Tourist</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link aver-extra-bold" href="#consultant_section">Về chúng tôi</a>
+                <a class="nav-link aver-semi-bold" href="#consultant_section">Về chúng tôi</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link aver-extra-bold" href="#benefit_section">Ưu điểm khi chọn đầu tư</a>
+                <a class="nav-link aver-semi-bold" href="#benefit_section">Ưu điểm khi chọn đầu tư</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link aver-extra-bold" href="#privilege_section">Đặc quyền cao cấp dành riêng</a>
+                <a class="nav-link aver-semi-bold" href="#privilege_section">Đặc quyền cao cấp dành riêng</a>
               </li>
             </ul>
           </div>
 
-          <div class="btn-container" style="width: 10%;">
+          <div class="btn-container">
             <button class="page-btn">Đăng ký tư vấn</button>
           </div>
 
@@ -85,22 +85,21 @@ export default {
         <div class="text" style="font-size: 14px;">Đầu trang</div>
       </div>
 
-      <div class="contact_wrapper p-70" style="width: 85%; margin: auto;">
-        <div class="contact_container d-flex" style="padding-bottom: 50px;">
-          <div class="firm_container">
-
-            <div class="title aver-bold fs-5">Điều khoản</div>
-            <div class="firm-items_container mt-4">
+      <div class="contact_container p-120 m-side-100">
+        <div class="contact_wrapper d-flex">
+          <div class="firm_container" style="margin-right: 100px;">
+            <div class="title aver-bold fs-4">Điều khoản</div>
+            <div class="firm-items_container" style="margin-top: 32px;">
               <div class="firm-item mb-2">Nội quy</div>
               <div class="firm-item">Chính sách bảo mật</div>
             </div>
 
           </div>
 
-          <div class="contact_container ms-5">
-            <div class="title aver-bold fs-5">Kết nối</div>
+          <div class="contact_wrapper">
+            <div class="title aver-bold fs-4">Kết nối</div>
 
-            <div class="contact-items_container mt-4">
+            <div class="contact-items_container" style="margin-top: 32px;">
               <div class="contact-item media_container d-flex mb-2">
                 <div class="media-item">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
@@ -140,9 +139,9 @@ export default {
           </div>
         </div>
 
-        <hr style="color: #c6c6c6;">
+        <hr style="color: #c6c6c6; margin: 72px 0;">
 
-        <div class="fin_container d-flex align-items-center" style="padding-top: 50px;">
+        <div class="fin_container d-flex align-items-center">
           <div class="img-wrapper" style="width: 40%;">
             <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block w-50">
           </div>
@@ -170,14 +169,14 @@ export default {
           </div>
         </div>
       </div>
-      <div class="copy-right page-gradient-blue text-center py-2 text-white">
+      <!-- <div class="copy-right page-gradient-blue text-center py-2 text-white">
         Copyright
         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24">
           <path fill="#fff"
             d="M11.88 9.14c1.28.06 1.61 1.15 1.63 1.66h1.79c-.08-1.98-1.49-3.19-3.45-3.19C9.64 7.61 8 9 8 12.14c0 1.94.93 4.24 3.84 4.24c2.22 0 3.41-1.65 3.44-2.95h-1.79c-.03.59-.45 1.38-1.63 1.44c-1.31-.04-1.86-1.06-1.86-2.73c0-2.89 1.28-2.98 1.88-3M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8" />
         </svg>
         2024 Vietnam Tourist
-      </div>
+      </div> -->
     </footer>
 
   </main>
@@ -186,6 +185,7 @@ export default {
 <style>
 main {
   font-family: 'AvertaRegular', sans-serif;
+  font-weight: normal;
 }
 
 .w-95 {
@@ -194,28 +194,35 @@ main {
 }
 
 .page-text-gradient {
-  background: linear-gradient(to right, #0181de, #0160a2);
+  background: linear-gradient(#0082df, #005ea0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-text-gradient-pink {
+  background: linear-gradient(#f0598c, #ef3b6d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .page-gradient-blue {
-  background: linear-gradient(#0181de, #0160a2);
+  background: linear-gradient(#0082df, #005ea0);
 }
 
 .page-gradient-pink {
-  background: linear-gradient(#f0578a, #f03d6f);
+  background: linear-gradient(#f0598c, #ef3b6d);
 }
 
-.m-70 {
-  margin: 70px auto;
+.m-side-100 {
+  margin: 0 100px;
 }
 
-.p-70 {
-  padding: 70px 0;
+.p-120 {
+  padding: 120px 0;
 }
 
 header {
+  height: 80px;
   position: sticky;
   top: 0;
   right: 0;
@@ -229,8 +236,9 @@ header {
 }
 
 .page-btn {
-  padding: 12px 25px;
-  font-size: 18px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: 'AvertaSemibold', sans-serif !important;
   background: linear-gradient(#f0578a, #f03d6f);
   color: #fff;
   border-radius: 15px;
@@ -253,11 +261,11 @@ header {
   right: 5%;
 }
 
-@media (min-width: 1024px) and  (max-width: 1920px) {
+/* @media (min-width: 1024px) and  (max-width: 1920px) {
   ul {
     font-size: 16px !important;
   }
-}
+} */
 
 
 @media (max-width: 1024px) {

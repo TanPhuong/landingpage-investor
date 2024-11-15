@@ -43,8 +43,8 @@ const data = [
     </div>
 
     <!-- Form register section -->
-    <div id="form-register_section" style="position: relative;">
-      <div class="form-register_wrapper w-95 d-flex justify-content-end" style="position: absolute; top: 10%;">
+    <div id="form-register_section" class="d-flex">
+      <div class="form-register_wrapper w-95 d-flex justify-content-end">
         <div class="form-register_container" style="width: 40%;  max-width: 600px;">
           <div class="container" style="padding: 32px;">
             <div class="aver-semi-bold fs-3 mb-3">👉 <span class="page-text-gradient">Đăng ký nhận tư vấn đầu tư!</span>
@@ -184,22 +184,21 @@ const data = [
     <!-- Consultant section -->
     <div id="consultant_section" class="section-scroll-margin">
       <div class="consultant_container p-120 m-side-100 d-flex justify-content-evenly align-items-center">
-        <div class="img-section" v-if="!props.mobileView" style="width: 40%;">
+        <div class="img-section" v-if="!props.mobileView" style="width: 35%;">
           <img src="../assets/images/Model 2.png" alt="" class="block w-100">
         </div>
 
-        <div class="detail-section" style="width: 35%;">
+        <div class="detail-section" style="width: 40%;">
           <div class="intro-container">
-            <div class="aver-semi-bold fs-2" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
+            <div class="intro-title aver-semi-bold fs-2" style="color: #f05083;">Kênh Đầu tư Vietnam Tourist</div>
             <div class="title-section aver-bold page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
           </div>
 
-          <div class="img-section w-25 my-3" v-if="props.mobileView">
+          <div class="img-section" v-if="props.mobileView">
             <img src="../assets/images/Model 2.png" alt="" class="block w-100">
           </div>
 
-          <div class="description-text mt-3 aver-regular" style="text-align: justify; font-size: 18px;">Kênh đầu tư
-            Vietnam Tourist là quỹ
+          <div class="description-text mt-3 aver-regular" style="text-align: justify; font-size: 18px;">Kênh đầu tư Vietnam Tourist là quỹ
             đầu tư được thành lập bởi Công ty Cổ phần Thương mại và Dịch vụ Vietnam Tourist được thành lập năm 2017,
             là một trong những doanh nghiệp lữ hành hàng đầu tại Việt Nam với mạng lưới chi nhánh trên toàn quốc, chuyên
             tổ chức tour trong nước, quốc tế</div>
@@ -214,7 +213,7 @@ const data = [
 
     <!-- Benefit section -->
     <div id="benefit_section" class="section-scroll-margin">
-      <div class="p-120">
+      <div class="benefit_container p-120">
         <div class="title-section page-text-gradient text-center aver-bold mb-5">Ưu điểm khi đầu tư Vietnam Tourist
         </div>
 
@@ -223,8 +222,7 @@ const data = [
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col" class="fs-5 aver-semi-bold" style="padding:24px 32px; min-width: 400px;">Gửi tiết kiệm
-                  thông thường</th>
+                <th scope="col" class="fs-5 aver-semi-bold" style="padding:24px 32px; min-width: 400px;">Gửi tiết kiệm thông thường</th>
                 <th scope="col" class="page-gradient-pink text-white fs-4 aver-bold"
                   style="padding: 16px 40px; border-radius: 25px 25px 0 0;"> Đầu tư vào quỹ Vietnam Tourist
                 </th>
@@ -246,9 +244,8 @@ const data = [
 
     <!-- Privilege section -->
     <div id="privilege_section" class="page-gradient-blue section-scroll-margin">
-      <div class="p-120 m-side-100">
-        <div class="title-section text-white aver-bold text-center" style="margin-bottom: 48px;">Đặc quyền dành riêng
-          cho cổ đông</div>
+      <div class="privilege_container p-120 m-side-100">
+        <div class="title-section text-white aver-bold text-center" style="margin-bottom: 48px;">Đặc quyền dành riêng cho cổ đông</div>
 
         <div class="privilege-item_container d-flex text-center text-white">
           <div class="privilege-item">
@@ -260,9 +257,7 @@ const data = [
             </div>
             <div class="desc-wrapper">
               <div class="title-privilege aver-bold fs-5">Chính sách đặc biệt khi mua Tour</div>
-              <div class="desc-privilege aver-regular">Cổ đông trở thành khách VIP,
-                nhận ngay ưu
-                đãi đặc biệt trên mọi chuyến đi.</div>
+              <div class="desc-privilege aver-regular">Cổ đông trở thành khách VIP, nhận ngay ưu đãi đặc biệt trên mọi chuyến đi.</div>
             </div>
           </div>
 
@@ -282,10 +277,7 @@ const data = [
             </div>
             <div class="desc-wrapper">
               <div class="title-privilege aver-bold fs-5">Cơ hội trở thành Đại lý bán hàng</div>
-              <div class="desc-privilege aver-regular">Mức hoa hồng hấp dẫn, được đào
-                tạo kỹ
-                năng
-                chuyên nghiệp - bài bản.
+              <div class="desc-privilege aver-regular">Mức hoa hồng hấp dẫn, được đào tạo kỹ năng chuyên nghiệp - bài bản.
               </div>
             </div>
           </div>
@@ -318,7 +310,7 @@ const data = [
         </div>
 
         <div class="detail-section p-120" style="margin-left: 150px; width: 40%;">
-          <div class="title-section aver-bold fs-1 page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
+          <div class="title-section aver-bold page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
 
           <div class="img-section w-25 my-3" v-if="props.mobileView">
             <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
@@ -342,21 +334,23 @@ const data = [
     <div id="representative_section">
       <div class="representative_container p-120 d-flex align-items-center justify-content-center">
         <div class="commit_container" style="width: 30%; margin-right: 120px;">
-          <div class="aver-semi-bold fs-2 page-text-gradient-pink">Với niềm đam mê khát khao phát triển trong ngành du
+          <div class="intro-title aver-semi-bold fs-2 page-text-gradient-pink">Với niềm đam mê khát khao phát triển
+            trong ngành du
             lịch</div>
 
           <div class="commit-text aver-bold fs-1" style="margin-top: 20px;">Vietnam Tourist cam kết luôn đồng hành và
             tạo nên giá trị cùng quý cổ đông</div>
 
-          <hr style="margin: 32px 0;">
+          <hr style="margin: 32px 0;" v-if="!mobileView">
+          <hr style="margin: 16px 0;" v-if="mobileView">
 
           <div class="ceo_container d-flex align-items-center">
-            <div class="ceo-name">
-              <p class="aver-semi-bold page-text-gradient fs-4 m-0">Phạm Anh Nhân</p>
-              <p class="m-0" style="font-size: 18px;">CEO of Vietnam Tourist</p>
+            <div class="ceo_wrapper">
+              <p class="ceo-name aver-semi-bold page-text-gradient fs-4 m-0">Phạm Anh Nhân</p>
+              <p class="ceo-position m-0" style="font-size: 18px;">CEO of Vietnam Tourist</p>
             </div>
 
-            <div class="btn-container" style="margin-left: 40px;">
+            <div class="btn-container" style="margin-left: 40px;" v-if="!mobileView">
               <button type="button" class="page-btn">Đăng ký tư vấn</button>
             </div>
           </div>
@@ -401,7 +395,7 @@ input[type="number"]::-webkit-inner-spin-button {
 #form-register_section {
   height: 85vh;
   background-image: url(../assets/images/Banner.png);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: left center;
 
@@ -517,6 +511,10 @@ tbody tr:last-child {
 #growth_section {
   background-color: #f1f9ff !important;
   position: relative;
+
+  & .growth_container {
+    min-height: 550px;
+  }
 }
 
 #growth_section::before {
@@ -539,9 +537,9 @@ tbody tr:last-child {
 #representative_section {
 
   & .ceo-portrait img {
-    border-radius: 64px; 
-    min-height: 600px; 
-    max-width: 500px; 
+    border-radius: 64px;
+    min-height: 600px;
+    max-width: 500px;
     object-fit: cover;
   }
 
@@ -557,23 +555,35 @@ tbody tr:last-child {
 @media (max-width: 1024px) {
 
   .title-section {
-    width: 80%;
-    margin: auto;
+    font-size: 28px;
+    margin-bottom: 32px !important;
     text-align: center;
   }
 
+  .page-btn {
+    font-size: 16px !important;
+    padding: 8px 24px;
+    margin-top: 12px;
+  }
+
   #form-register_section {
+    height: fit-content;
     background: none !important;
 
     & .form-register_wrapper {
       display: block !important;
-      padding: 30px 0 !important;
+      height: fit-content;
+      padding: 40px 0 !important;
+      margin: 0 16px !important;
       border-bottom: 1px solid #d9d9d9;
-      position: static !important;
     }
 
     & .form-register_container {
       width: 100% !important;
+
+      & .container {
+        padding: 0 !important;
+      }
 
       & .register-item_wrapper {
         margin-bottom: 0 !important;
@@ -583,40 +593,64 @@ tbody tr:last-child {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 12px !important;
       }
     }
   }
 
 
   #reason_section {
-    margin-top: 30px;
-    margin-bottom: 0 !important;
+    margin: 40px 16px 80px !important;
 
     & .reason_container {
-      padding-top: 0 !important;
+      padding: 0 !important;
     }
 
-    & .reason-item_container .reason-item {
-      width: 50% !important;
-      margin-top: 30px;
+    & .reason-item_container {
+      flex-wrap: wrap;
+      text-align: start !important;
 
-      & .description {
-        font-size: 16px !important;
+      & .reason-item {
+        width: 50% !important;
+        max-width: 171px;
+
+        & .icon-container {
+          width: 52px;
+          height: 52px;
+          margin: 0;
+        }
+
+        & .description {
+          margin-top: 12px !important;
+          font-size: 14px !important;
+        }
+      }
+
+      & .reason-item:nth-child(1),
+      .reason-item:nth-child(3) {
+        margin-right: 16px;
+      }
+
+      & .reason-item:nth-child(3),
+      .reason-item:nth-child(4) {
+        margin-top: 32px;
       }
     }
+
   }
 
-  .consultant_container {
+  #consultant_section .consultant_container {
     display: block !important;
+    margin: 0 16px !important;
+    padding: 80px 0 !important;
 
     & .detail-section {
       width: 100% !important;
     }
 
     & .img-section {
-      width: 100% !important;
       text-align: center;
+      margin-bottom: 32px;
 
       & img {
         width: 80% !important;
@@ -625,67 +659,110 @@ tbody tr:last-child {
 
     & .intro-container {
       text-align: center;
+
+      & .intro-title {
+        font-size: 18px !important;
+      }
+    }
+
+    & .description-text {
+      margin: 0 !important;
+      font-size: 14px !important;
     }
 
     & .btn-container {
+      margin-top: 20px !important;
       display: flex;
       justify-content: center;
+
+      & .page-btn {
+        margin: 0;
+      }
+
+      & .ceo-mail--btn {
+        margin-left: 16px;
+      }
     }
   }
 
   #benefit_section {
     margin: 0 !important;
 
+    & .benefit_container {
+      margin: 80px 16px;
+      padding: 0 !important;
+    }
+
     & .table-container table {
+      margin: 0 !important;
       width: 100% !important;
 
       & thead th,
       tbody th,
       tbody td {
+        min-width: 119px;
+      }
+
+      & thead th {
         font-size: 14px !important;
+        padding: 16px 8px !important;
+        min-width: 0 !important;
+      }
+
+      & tbody th {
+        font-size: 12px !important;
+        padding: 20px 8px !important;
+      }
+
+      & tbody td {
+        font-size: 12px !important;
+        padding: 24px 8px !important;
       }
 
       & tr th:last-child {
         font-size: 16px !important;
-        padding: 24px 10px !important;
       }
 
-      & .investment-item {
-        padding: 24px 10px !important;
-      }
+      & .investment-item {}
     }
   }
 
   #privilege_section {
     padding: 0 !important;
 
+    & .privilege_container {
+      padding: 80px 0 !important;
+      margin: 0 16px !important;
+    }
+
     & .privilege-item_container {
       display: flex !important;
       flex-direction: column !important;
-      margin-top: 30px !important;
 
       & .privilege-item {
         display: flex !important;
-        margin-top: 20px;
+        padding: 0;
+        margin-bottom: 40px;
 
         & .icon-wrapper {
-          width: 80px;
-          height: 60px;
-          padding: 5px 10px;
+          min-width: 52px !important;
+          height: 52px !important;
           border-radius: 15px;
+          margin: 0 !important;
         }
 
         & .desc-wrapper {
           text-align: left;
           margin-left: 20px;
+          margin-top: 0 !important;
         }
 
         & .title-privilege {
-          font-size: 18px !important;
+          font-size: 16px !important;
         }
 
         & .desc-privilege {
-          font-size: 16px !important;
+          font-size: 14px !important;
           width: 100% !important;
           margin: 0 !important;
           padding-top: 8px;
@@ -699,25 +776,41 @@ tbody tr:last-child {
 
     & .growth_container {
       display: block !important;
-      padding: 50px 0 !important;
+      padding: 80px 0 !important;
+      margin: 0 16px !important;
 
       & .img-section {
         width: 100% !important;
         text-align: center;
+        margin: 0 !important;
 
         & img {
           width: 80% !important;
-          padding: 25px
         }
       }
 
       & .detail-section {
         width: 100% !important;
         margin-left: 0 !important;
+        padding: 0 !important;
+
+        & .title-section {
+          margin-bottom: 24px !important;
+        }
+
+        & .description-text {
+          margin: 24px 0 !important;
+          font-size: 14px !important;
+        }
 
         & .btn-container {
           display: flex;
           justify-content: center;
+          margin: 0 !important;
+
+          & button {
+            margin: 0;
+          }
         }
       }
     }
@@ -728,31 +821,46 @@ tbody tr:last-child {
   }
 
   #representative_section .representative_container {
+    padding: 80px 0 !important;
+    margin: 0 16px !important;
     flex-direction: row-reverse;
     align-items: start !important;
 
     & .commit_container {
-      width: 60% !important;
-      margin-left: 10px;
+      margin-right: 0 !important;
+      margin-left: 24px;
+      width: 55% !important;
 
-      & .title-section {
-        font-size: 16px !important;
+      & .intro-title {
+        font-size: 14px !important;
       }
 
       & .commit-text {
-        font-size: 24px !important;
+        font-size: 20px !important;
       }
 
-      & .btn-container {
-        display: none !important;
+      & .ceo_container {
+        & .ceo-name {
+          font-size: 14px !important;
+        }
+
+        & .ceo-position {
+          font-size: 12px !important;
+        }
       }
     }
 
     & .ceo-portrait {
+      width: 40% !important;
 
       & img {
-        width: 90% !important;
+        min-height: 159px !important;
+        min-width: 128px !important;
+        border-radius: 24px;
+        object-fit: cover;
       }
+
+
     }
   }
 }

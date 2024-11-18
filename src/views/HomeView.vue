@@ -480,7 +480,7 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 
     & .detail-section {
-      width: 40%;
+      width: 45%;
 
       & .intro-title {
         color: #f05083;
@@ -650,7 +650,7 @@ input[type="number"]::-webkit-inner-spin-button {
 #representative_section {
 
   & .commit_container {
-    width: 27%;
+    width: 35%;
     margin-right: 120px;
 
     & .commit-text {

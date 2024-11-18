@@ -191,7 +191,7 @@ const data = [
         <div class="detail-section">
           <div class="intro-container">
             <div class="intro-title aver-semi-bold fs-2">Kênh Đầu tư Vietnam Tourist</div>
-            <div class="title-section aver-bold page-text-gradient">Cơ hội siêu hấp dẫn cho Nhà đầu tư</div>
+            <div class="title-section aver-bold page-text-gradient">Cơ hội siêu hấp dẫn cho <br>Nhà đầu tư</div>
           </div>
 
           <div class="img-section_mobile" v-if="props.mobileView">
@@ -311,7 +311,7 @@ const data = [
         </div>
 
         <div class="detail-section p-120">
-          <div class="title-section aver-bold page-text-gradient">Giá trị đầu tư tăng gấp 3-30 lần/năm</div>
+          <div class="title-section aver-bold page-text-gradient">Giá trị đầu tư tăng gấp <br> 3-30 lần/năm</div>
 
           <div class="img-section w-25 my-3" v-if="props.mobileView">
             <img src="../assets/images/Model 3 copy.png" alt="" class="w-100 block">
@@ -480,7 +480,7 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 
     & .detail-section {
-      width: 35%;
+      width: 40%;
 
       & .intro-title {
         color: #f05083;
@@ -643,6 +643,7 @@ input[type="number"]::-webkit-inner-spin-button {
   backdrop-filter: blur(5px);
   filter: blur(5px);
   opacity: 0.1;
+  z-index: -1;
 }
 
 /* Representation section */
@@ -910,7 +911,7 @@ input[type="number"]::-webkit-inner-spin-button {
       & .img-section {
         width: 100% !important;
         text-align: center;
-        margin: 24px 0 !important;
+        margin: 24px auto !important;
 
         & img {
           width: 80% !important;
@@ -923,7 +924,6 @@ input[type="number"]::-webkit-inner-spin-button {
         padding: 0;
 
         & .title-section {
-          width: 90%;
           margin: auto;
         }
 

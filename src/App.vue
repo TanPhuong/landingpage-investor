@@ -441,6 +441,7 @@ footer {
 
   .copy-right {
     font-size: 12px;
+    padding: 12px 90px; 
   }
 
 }

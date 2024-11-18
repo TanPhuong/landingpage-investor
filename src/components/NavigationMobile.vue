@@ -6,19 +6,18 @@
                 <img src="../assets/images/logo-transparent-2.png" alt="Logo" class="w-100 block">
             </a>
 
-            <div class="d-flex align-items-center" style="width: auto;">
+            <div class="d-flex align-items-center">
                 <div class="btn-container me-3">
-                    <button class="page-btn" style="font-size: 14px;">Đăng ký tư vấn</button>
+                    <button class="page-btn">Đăng ký tư vấn</button>
                 </div>
 
                 <button class="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"
-                    style="border: none;">
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel" style="height: 100vh;">
+                    aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header justify-content-between">
 
                         <!-- Logo -->
@@ -27,9 +26,8 @@
                         </a>
 
                         <div class="btn-container">
-                            <button class="page-btn" style="font-size: 14px;">Đăng ký tư vấn</button>
-                            <button type="button" class="btn btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
+                            <button class="page-btn">Đăng ký tư vấn</button>
+                            <button type="button" class="btn btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
 
                     </div>
@@ -59,22 +57,35 @@
 </template>
 
 <style scoped>
-@media (max-width: 1024px) {
+    .page-btn {
+        font-size: 14px !important; 
+    }
+
     nav {
 
         & .navbar-brand {
             min-width: 100px;
             max-height: 40px;
         }
+
+        & .offcanvas {
+            height: 100vh;
+        }
+
+        & .navbar-toggler {
+            border: none;
+        }
     }
 
     .offcanvas-header {
+        padding: 8px 16px;
         box-shadow: 0 0 6px #cccbcb;
 
         & .btn-close {
             width: 24px;
             height: 24px;
             padding: 0;
+            margin: 0;
         }
 
         & .page-btn {
@@ -102,5 +113,4 @@
 
 
 
-}
 </style>

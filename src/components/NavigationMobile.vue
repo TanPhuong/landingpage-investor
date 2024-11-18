@@ -31,7 +31,7 @@
                         </div>
 
                     </div>
-                    
+
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
@@ -66,7 +66,11 @@
 
         & .navbar-brand {
             min-width: 100px;
-            max-height: 40px;
+
+            & img {
+                max-height: 40px;
+                object-fit: cover;
+            }
         }
 
         & .offcanvas {

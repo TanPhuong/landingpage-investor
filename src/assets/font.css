@@ -89,20 +89,20 @@
 }
 
 @font-face {
-    font-family: "AvertaSemibold";
+    font-family: 'AvertaSemibold';
     src: url('../assets/fonts/Intelligent Design - AvertaStdCY-Semibold_1.otf') format('opentype');
 }
 
 .aver-semi-bold {
-    font-family: "AvertaSemibold", sans-serif !important;
+    font-family: 'AvertaSemibold', sans-serif !important;
 }
 
 @font-face {
-    font-family: "AvertaSemiboldItalic";
+    font-family: 'AvertaSemiboldItalic';
     src: url('../assets/fonts/Intelligent Design - AvertaStdCY-SemiboldItalic_1.otf') format('opentype');
 }
 
 .aver-semi-bold-italic {
-    font-family: "AvertaSemiboldItalic", sans-serif !important;
+    font-family: 'AvertaSemiboldItalic', sans-serif !important;
 }
 

@@ -158,7 +158,7 @@ export default {
               du lịch Vietnam Tourist</div>
             <div class="information_container d-flex mt-2">
               <div class="infor-item pe-3">
-                <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16px" height="16px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M24 4C35.0456 4 44 12.9543 44 24C44 35.0456 35.0456 44 24 44C12.9543 44 4 35.0456 4 24C4 12.9543 12.9543 4 24 4ZM32.0086 25.7554C31.3178 24.7066 30.8194 23.9492 28.9244 24.2496C25.3434 24.818 24.9464 25.4448 24.7754 26.475L24.7272 26.7886L24.6786 27.1194C24.4832 28.4856 24.4906 29.0024 25.1178 29.6616C27.6482 32.3164 29.164 34.23 29.6232 35.3492C29.8474 35.8968 30.4238 37.5502 30.0272 39.1854C32.4744 38.2132 34.6312 36.6664 36.3306 34.7118C36.551 33.9642 36.7102 33.0332 36.7102 31.9036V31.6944C36.7102 29.8494 36.7102 29.008 35.4062 28.2628C34.856 27.9502 34.4454 27.762 34.1164 27.6128C33.382 27.2788 32.8958 27.0594 32.2396 26.0998C32.1614 25.9856 32.085 25.8716 32.0086 25.7554ZM24 7.66666C19.3652 7.66666 15.1812 9.59716 12.2084 12.6979C12.5623 12.9437 12.8707 13.2891 13.0826 13.7651C13.4906 14.6806 13.4906 15.6224 13.4906 16.4553C13.4898 17.1124 13.4888 17.7344 13.6998 18.186C13.9889 18.8027 15.2328 19.0645 16.331 19.2947C16.7233 19.3773 17.1279 19.4617 17.4959 19.5635C18.5081 19.8447 19.2911 20.753 19.9188 21.4824C20.1792 21.7862 20.5638 22.2326 20.7566 22.3434C20.8572 22.2712 21.18 21.9216 21.3398 21.347C21.4614 20.9094 21.4268 20.5194 21.2478 20.3086C20.1296 18.9889 20.1904 16.4464 20.536 15.5099C21.0804 14.0321 22.781 14.1412 24.024 14.2219C24.4876 14.2518 24.9252 14.2805 25.2514 14.2395C26.4964 14.0833 26.8792 12.1908 27.15 11.82C27.7342 11.0196 29.5214 9.8142 30.6316 9.06908C28.605 8.16764 26.361 7.66666 24 7.66666Z"
                     fill="black" />
@@ -363,22 +363,23 @@ footer {
 
   footer {
     & .return-top_container {
-      width: 69px !important;
-      height: 92px !important;
+      width: 69px;
+      height: 92px;
       padding: 28px 6px !important;
+      top: -7%;
 
       & div {
-        font-size: 12px !important;
+        font-size: 12px;
         margin-top: 4px;
       }
     }
 
     & .contact_container {
-      padding: 80px 0 40px !important;
-      margin: 0 16px !important;
+      padding: 80px 0 40px;
+      margin: 0 16px;
 
       & .firm_container {
-        margin: 0 !important;
+        margin: 0;
         width: 50%;
         min-width: 131px;
 
@@ -387,10 +388,10 @@ footer {
         }
 
         & .firm-items_container {
-          margin-top: 24px !important;
+          margin-top: 24px;
 
           & .firm-item {
-            font-size: 14px !important;
+            font-size: 14px;
           }
         }
       }
@@ -403,10 +404,10 @@ footer {
         }
 
         & .contact-items_container {
-          margin-top: 24px !important;
+          margin-top: 24px;
 
           & .contact-item {
-            font-size: 14px !important;
+            font-size: 14px;
           }
         }
       }
@@ -416,7 +417,7 @@ footer {
         align-items: unset !important;
 
         & .img-wrapper {
-          width: 50% !important;
+          width: 50%;
         }
 
         & .company-information {

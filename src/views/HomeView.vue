@@ -384,6 +384,11 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.title-section {
+  font-size: 48px;
+  color: #005ea0;
+}
+
 .section-scroll-margin {
   scroll-margin-top: 80px;
 }
@@ -405,28 +410,23 @@ input[type="number"]::-webkit-inner-spin-button {
     & .container {
       padding: 32px;
     }
+
+    & .input-investor {
+      padding: 16px;
+      border: 2px solid #d9d9d9;
+      border-radius: 16px;
+    }
+
+    & select.input-investor {
+      font-weight: 500;
+    }
+
+    & .input-investor::placeholder {
+      font-size: 14px;
+      font-family: 'AvertaSemibold', sans-serif !important;
+      color: #d9d9d9;
+    }
   }
-}
-
-.title-section {
-  font-size: 48px;
-  color: #005ea0;
-}
-
-.input-investor {
-  padding: 16px;
-  border: 2px solid #d9d9d9;
-  border-radius: 16px;
-}
-
-select.input-investor {
-  font-weight: 500;
-}
-
-.input-investor::placeholder {
-  font-size: 14px;
-  font-family: 'AvertaSemibold', sans-serif !important;
-  color: #d9d9d9;
 }
 
 /* Reason section */
@@ -662,8 +662,6 @@ select.input-investor {
 }
 
 
-
-
 @media (max-width: 1024px) {
 
   .title-section {
@@ -691,6 +689,7 @@ select.input-investor {
 
     & .form-register_container {
       width: 100%;
+      margin: auto;
 
       & .container {
         padding: 0;
@@ -829,8 +828,6 @@ select.input-investor {
       & tr th:last-child {
         font-size: 16px !important;
       }
-
-      & .investment-item {}
     }
   }
 
@@ -851,6 +848,7 @@ select.input-investor {
         margin-bottom: 40px;
 
         & .icon-wrapper {
+          width: 52px;
           min-width: 52px;
           height: 52px;
           border-radius: 15px;

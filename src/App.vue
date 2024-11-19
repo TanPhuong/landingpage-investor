@@ -39,7 +39,7 @@ export default {
     <header class="w-100 bg-light">
       <nav class="navbar navbar-expand-lg w-100 p-0" v-if="!mobileView">
         <div class="container-fluid p-0">
-          <a class="navbar-brand m-0 p-0" href="#">
+          <a class="navbar-brand" href="#" style="width: 10%;">
             <img src="./assets/images/logo-transparent-2.png" alt="Logo" class="block w-100">
           </a>
 

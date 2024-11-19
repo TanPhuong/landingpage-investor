@@ -5,7 +5,7 @@ import NavigationMobile from './components/NavigationMobile.vue';
 export default {
   components: {
     HomeView,
-    NavigationMobile
+    NavigationMobile,
   },
   data: () => {
     return {
@@ -62,7 +62,7 @@ export default {
           </div>
 
           <div class="btn-container">
-            <button class="page-btn">Đăng ký tư vấn</button>
+            <button class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư vấn</button>
           </div>
 
         </div>

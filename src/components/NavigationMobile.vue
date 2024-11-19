@@ -8,7 +8,7 @@
 
             <div class="d-flex align-items-center">
                 <div class="btn-container me-3">
-                    <button class="page-btn">Đăng ký tư vấn</button>
+                    <button class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư vấn</button>
                 </div>
 
                 <button class="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas"
@@ -26,7 +26,7 @@
                         </a>
 
                         <div class="btn-container">
-                            <button class="page-btn">Đăng ký tư vấn</button>
+                            <button class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư vấn</button>
                             <button type="button" class="btn btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
 

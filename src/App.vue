@@ -197,6 +197,12 @@ main {
   font-weight: normal;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .w-95 {
   width: 95%;
   margin: auto;

@@ -3,6 +3,9 @@ const props = defineProps({
   mobileView: {
     type: Boolean,
     required: true
+  },
+  provincesData: {
+    type: Array
   }
 })
 </script>
@@ -77,6 +80,7 @@ const props = defineProps({
                                         <select name="cityInput" id="cityInput"
                                             class="form-select form-select-sm input-investor aver-semi-bold">
                                             <option selected class="aver-bold">Chọn Tỉnh/Thành phố</option>
+                                            <option v-for="(index, item) in provincesData" :key="index">{{ index }}</option>
                                         </select>
                                     </div>
 

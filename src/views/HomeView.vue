@@ -1,5 +1,6 @@
 <script setup>
 import ModalForm from '@/components/ModalForm.vue';
+import { nextTick, onMounted, ref } from 'vue';
 
 const props = defineProps({
   mobileView: {
@@ -39,20 +40,24 @@ const data = [
 // API to get VN provinces
 const vnProvincesAPI = "https://provinces.open-api.vn/api/p/"; 
 
-fetch(vnProvincesAPI)
-  .then(res => res.json)
-  .then(data => console.log(data))
-  .catch(error => console.log('ERROR' + error))
+let provincesData = ref([]);
 
-console.log(fetch(vnProvincesAPI))
-
+onMounted(async () => {
+  await fetch(vnProvincesAPI)
+    .then(res => res.json())
+    .then(data => {
+      provincesData.value = data.map(p => p.name)
+      console.log(provincesData.value)
+    })
+    .catch(error => console.log('ERROR' + error))
+})
 
 </script>
 
 <template>
   <main>
 
-    <ModalForm :mobile-view="mobileView"/>
+    <ModalForm :mobile-view="mobileView" :provinces-data="provincesData"/>
 
     <div class="img-section w-100" v-if="props.mobileView">
       <img src="../assets/images/Pop-up.png" alt="" class="block w-100">
@@ -71,7 +76,7 @@ console.log(fetch(vnProvincesAPI))
               <div class="register-item mb-3">
                 <label for="nameInput" class="form-label aver-semi-bold">Họ và tên
                   <span class="page-text-gradient-pink">(*)</span></label>
-                <input type="text" class="form-control input-investor" id="nameInput"
+                <input required type="text" class="form-control input-investor" id="nameInput"
                   placeholder="Nhập Họ và tên của bạn">
               </div>
 
@@ -80,13 +85,14 @@ console.log(fetch(vnProvincesAPI))
                 <div class="register-item col-6">
                   <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                     <span class="page-text-gradient-pink">(*)</span></label>
-                  <input type="number" class="form-control input-investor" id="phoneInput"
+                  <input required type="number" class="form-control input-investor" id="phoneInput"
                     placeholder="Nhập số điện thoại của bạn">
                 </div>
+
                 <div class="register-item col-6">
                   <label for="emailInput" class="form-label aver-semi-bold">Email
                     <span class="page-text-gradient-pink">(*)</span></label>
-                  <input type="email" class="form-control input-investor" id="emailInput"
+                  <input required type="email" class="form-control input-investor" id="emailInput"
                     placeholder="Nhập email của bạn">
                 </div>
               </div>
@@ -116,6 +122,7 @@ console.log(fetch(vnProvincesAPI))
                 <select name="cityInput" id="cityInput"
                   class="form-select form-select-sm input-investor aver-semi-bold">
                   <option selected class="aver-bold">Chọn Tỉnh/Thành phố</option>
+                  <option v-for="(item, index) in provincesData" :key="index">{{ item }}</option>
                 </select>
               </div>
 

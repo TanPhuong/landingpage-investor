@@ -1,6 +1,7 @@
 <script setup>
 import ModalForm from '@/components/ModalForm.vue';
-import { nextTick, onMounted, ref } from 'vue';
+import axios from 'axios';
+import { onMounted, reactive, ref, toRaw } from 'vue';
 
 const props = defineProps({
   mobileView: {
@@ -52,12 +53,35 @@ onMounted(async () => {
     .catch(error => console.log('ERROR' + error))
 })
 
+let formData = reactive({
+  name: "",
+  phone: "",
+  email: "",
+  investment: "Chọn số tiền dự định đầu tư",
+  provinces: "Chọn Tỉnh/Thành phố"
+})
+
+const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
+
+const handleSubmit = async (e) => {
+  e.preventDefault() 
+  console.log(toRaw(formData));
+
+  const res = await axios.post(submitFormAPI, toRaw(formData));
+  console.log(res) 
+}
+
+
+
 </script>
 
 <template>
   <main>
 
-    <ModalForm :mobile-view="mobileView" :provinces-data="provincesData"/>
+    <ModalForm 
+      :mobile-view="mobileView" 
+      :provinces-data="provincesData"
+      />
 
     <div class="img-section w-100" v-if="props.mobileView">
       <img src="../assets/images/Pop-up.png" alt="" class="block w-100">
@@ -71,13 +95,13 @@ onMounted(async () => {
             <div class="aver-semi-bold fs-3 mb-3">👉 <span class="page-text-gradient">Đăng ký nhận tư vấn đầu tư!</span>
             </div>
 
-            <form action="submit">
+            <form method="post" @submit="handleSubmit">
               <!-- Name input -->
               <div class="register-item mb-3">
                 <label for="nameInput" class="form-label aver-semi-bold">Họ và tên
                   <span class="page-text-gradient-pink">(*)</span></label>
-                <input required type="text" class="form-control input-investor" id="nameInput"
-                  placeholder="Nhập Họ và tên của bạn">
+                <input required type="text" class="form-control input-investor" id="nameInput" v-model="formData.name" 
+                  placeholder="Nhập Họ và tên của bạn" @input="event => text = event.target.value">
               </div>
 
               <!-- phone and email input -->
@@ -85,15 +109,15 @@ onMounted(async () => {
                 <div class="register-item col-6">
                   <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                     <span class="page-text-gradient-pink">(*)</span></label>
-                  <input required type="number" class="form-control input-investor" id="phoneInput"
-                    placeholder="Nhập số điện thoại của bạn">
+                  <input required type="number" class="form-control input-investor" id="phoneInput" v-model.number="formData.phone"
+                    placeholder="Nhập số điện thoại của bạn" @input="event => text = event.target.value">
                 </div>
 
                 <div class="register-item col-6">
                   <label for="emailInput" class="form-label aver-semi-bold">Email
                     <span class="page-text-gradient-pink">(*)</span></label>
-                  <input required type="email" class="form-control input-investor" id="emailInput"
-                    placeholder="Nhập email của bạn">
+                  <input required type="email" class="form-control input-investor" id="emailInput" v-model="formData.email"
+                    placeholder="Nhập email của bạn" @input="event => text = event.target.value">
                 </div>
               </div>
 
@@ -102,8 +126,8 @@ onMounted(async () => {
                 <label for="investmentInput" class="form-label aver-semi-bold">Số tiền dự định đầu tư
                   <span class="page-text-gradient-pink">(*)</span></label>
                 <select name="investmentInput" id="investmentInput"
-                  class="form-select form-select-sm input-investor aver-semi-bold">
-                  <option>Chọn số tiền dự định đầu tư</option>
+                  class="form-select form-select-sm input-investor aver-semi-bold" v-model="formData.investment">
+                  <option disabled>Chọn số tiền dự định đầu tư</option>
                   <option>10,000,000</option>
                   <option>20,000,000</option>
                   <option>30,000,000</option>
@@ -115,13 +139,13 @@ onMounted(async () => {
                 </select>
               </div>
 
-              <!-- city -->
+              <!-- provinces -->
               <div class="register-item mb-4">
                 <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố
                   <span class="page-text-gradient-pink">(*)</span></label>
-                <select name="cityInput" id="cityInput"
-                  class="form-select form-select-sm input-investor aver-semi-bold">
-                  <option selected class="aver-bold">Chọn Tỉnh/Thành phố</option>
+                <select name="cityInput" id="cityInput"  
+                  class="form-select form-select-sm input-investor aver-semi-bold" v-model="formData.provinces">
+                  <option disabled>Chọn Tỉnh/Thành phố</option>
                   <option v-for="(item, index) in provincesData" :key="index">{{ item }}</option>
                 </select>
               </div>

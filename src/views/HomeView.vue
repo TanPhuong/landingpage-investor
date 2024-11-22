@@ -42,13 +42,19 @@ const data = [
 const vnProvincesAPI = "https://provinces.open-api.vn/api/p/"; 
 
 let provincesData = ref([]);
+let cleanedProvincesData = ref([])
 
 onMounted(async () => {
   await fetch(vnProvincesAPI)
     .then(res => res.json())
     .then(data => {
       provincesData.value = data.map(p => p.name)
-      console.log(provincesData.value)
+
+      cleanedProvincesData = provincesData.value.map((province) =>
+        province.replace("Tỉnh ", "")
+      );
+
+      console.log(cleanedProvincesData);
     })
     .catch(error => console.log('ERROR' + error))
 })
@@ -65,10 +71,10 @@ const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
 
 const handleSubmit = async (e) => {
   e.preventDefault() 
-  console.log(toRaw(formData));
-
   const res = await axios.post(submitFormAPI, toRaw(formData));
-  console.log(res) 
+  
+  console.log(toRaw(formData));
+  location.reload();
 }
 
 
@@ -80,7 +86,7 @@ const handleSubmit = async (e) => {
 
     <ModalForm 
       :mobile-view="mobileView" 
-      :provinces-data="provincesData"
+      :cleaned-provinces-data="cleanedProvincesData"
       />
 
     <div class="img-section w-100" v-if="props.mobileView">
@@ -110,7 +116,7 @@ const handleSubmit = async (e) => {
                   <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                     <span class="page-text-gradient-pink">(*)</span></label>
                   <input required type="number" class="form-control input-investor" id="phoneInput" v-model.number="formData.phone"
-                    placeholder="Nhập số điện thoại của bạn" @input="event => text = event.target.value">
+                    placeholder="Nhập số điện thoại của bạn" @input="event => text = event.target.value" \>
                 </div>
 
                 <div class="register-item col-6">
@@ -146,7 +152,7 @@ const handleSubmit = async (e) => {
                 <select name="cityInput" id="cityInput"  
                   class="form-select form-select-sm input-investor aver-semi-bold" v-model="formData.provinces">
                   <option disabled>Chọn Tỉnh/Thành phố</option>
-                  <option v-for="(item, index) in provincesData" :key="index">{{ item }}</option>
+                  <option v-for="(item, index) in cleanedProvincesData" :key="index">{{ item }}</option>
                 </select>
               </div>
 

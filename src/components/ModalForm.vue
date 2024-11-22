@@ -1,4 +1,5 @@
 <script setup>
+import axios from 'axios';
 import { reactive, toRaw } from 'vue';
 
 const props = defineProps({
@@ -6,7 +7,7 @@ const props = defineProps({
     type: Boolean,
     required: true
   },
-  provincesData: {
+  cleanedProvincesData: {
     type: Array
   }
 })
@@ -19,9 +20,16 @@ let formData = reactive({
   provinces: "Chọn Tỉnh/Thành phố"
 })
 
-const handleSubmit = (e) => {
+const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
+
+const handleSubmit = async (e) => {
   e.preventDefault() 
+  const res = await axios.post(submitFormAPI, toRaw(formData));
+  
   console.log(toRaw(formData));
+  
+  console.log(res) 
+  location.reload();
 }
 
 
@@ -97,7 +105,7 @@ const handleSubmit = (e) => {
                                         <select name="cityInput" id="cityInput"
                                             class="form-select form-select-sm input-investor aver-semi-bold" v-model="formData.provinces">
                                             <option disabled>Chọn Tỉnh/Thành phố</option>
-                                            <option v-for="(item, index) in provincesData" :key="index">{{ item }}</option>
+                                            <option v-for="(item, index) in cleanedProvincesData" :key="index">{{ item }}</option>
                                         </select>
                                     </div>
 

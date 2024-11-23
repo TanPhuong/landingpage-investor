@@ -100,8 +100,7 @@ const handleSubmit = async (e) => {
 
                                     <!-- city -->
                                     <div class="register-item mb-4">
-                                        <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố
-                                            <span class="page-text-gradient-pink">(*)</span></label>
+                                        <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố</label>
                                         <select name="cityInput" id="cityInput"
                                             class="form-select form-select-sm input-investor aver-semi-bold" v-model="formData.provinces">
                                             <option disabled>Chọn Tỉnh/Thành phố</option>
@@ -181,7 +180,7 @@ const handleSubmit = async (e) => {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
 
     .modal-dialog {
         width: 90% !important;

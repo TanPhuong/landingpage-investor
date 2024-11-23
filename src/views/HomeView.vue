@@ -1,5 +1,6 @@
 <script setup>
 import ModalForm from '@/components/ModalForm.vue';
+import LetterForm from '@/components/LetterForm.vue';
 import axios from 'axios';
 import { onMounted, reactive, ref, toRaw } from 'vue';
 
@@ -50,7 +51,7 @@ onMounted(async () => {
     .then(data => {
       provincesData.value = data.map(p => p.name)
 
-      cleanedProvincesData = provincesData.value.map((province) =>
+      cleanedProvincesData.value = provincesData.value.map((province) =>
         province.replace("Tỉnh ", "")
       );
 
@@ -74,6 +75,7 @@ const handleSubmit = async (e) => {
   const res = await axios.post(submitFormAPI, toRaw(formData));
   
   console.log(toRaw(formData));
+  console.log(res)
   location.reload();
 }
 
@@ -86,6 +88,8 @@ const handleSubmit = async (e) => {
       :mobile-view="mobileView" 
       :cleaned-provinces-data="cleanedProvincesData"
       />
+
+    <LetterForm />
 
     <div class="img-section w-100" v-if="props.mobileView">
       <img src="../assets/images/Pop-up.png" alt="" class="block w-100">
@@ -113,7 +117,7 @@ const handleSubmit = async (e) => {
                 <div class="register-item col-6">
                   <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                     <span class="page-text-gradient-pink">(*)</span></label>
-                  <input required type="number" pattern="[0-9]"class="form-control input-investor" id="phoneInput" v-model.number="formData.phone"
+                  <input required type="number" pattern="[0-9]" class="form-control input-investor" id="phoneInput" v-model.number="formData.phone"
                     placeholder="Nhập số điện thoại của bạn">
                 </div>
 
@@ -263,7 +267,7 @@ const handleSubmit = async (e) => {
 
           <div class="btn-container">
             <button type="button" class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư vấn</button>
-            <button type="button" class="ceo-mail--btn aver-semi-bold">Thư ngỏ từ CEO</button>
+            <button type="button" class="ceo-mail--btn aver-semi-bold" data-bs-toggle="modal" data-bs-target="#backdropLetter">Thư ngỏ từ CEO</button>
           </div>
         </div>
       </div>

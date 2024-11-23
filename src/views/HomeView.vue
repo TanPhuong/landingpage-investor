@@ -89,7 +89,7 @@ const handleSubmit = async (e) => {
       :cleaned-provinces-data="cleanedProvincesData"
       />
 
-    <LetterForm />
+    <LetterForm :mobile-view="mobileView" />
 
     <div class="img-section w-100" v-if="props.mobileView">
       <img src="../assets/images/Pop-up.png" alt="" class="block w-100">

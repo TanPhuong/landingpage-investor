@@ -112,4 +112,22 @@ const props = defineProps({
     overflow: scroll;
     text-align: justify;
 }
+
+@media (max-width: 430px) {
+    .modal-content {
+        padding: 16px !important;
+        border-radius: 16px !important;
+    }
+
+    .modal-body {
+        display: block;
+    }
+
+    .letter_container {
+        width: 100% !important;
+        margin-left: 0;
+        padding: 0 8px;
+    }
+
+}
 </style>

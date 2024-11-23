@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
 
-                                <div class="aver-semi-bold fs-3 mb-3">👉 <span class="page-text-gradient">Đăng ký nhận tư vấn đầu tư!</span>
+                                <div class="title aver-semi-bold fs-3 mb-3">👉 <span class="page-text-gradient">Đăng ký nhận tư vấn đầu tư!</span>
                                 </div>
 
                                 <form method="post" @submit="handleSubmit">
@@ -166,10 +166,11 @@ const handleSubmit = async (e) => {
 
     & select.input-investor {
         font-weight: 500;
+        font-size: 12px;
     }
 
     & .input-investor::placeholder {
-        font-size: 14px;
+        font-size: 12px;
         font-family: 'AvertaSemibold', sans-serif !important;
         color: #d9d9d9;
     }
@@ -181,6 +182,13 @@ const handleSubmit = async (e) => {
 }
 
 @media (max-width: 430px) {
+
+    .modal-dialog {
+        width: 90% !important;
+        max-width: inherit;
+        margin: auto;
+    }
+
     .modal-content {
         padding: 16px !important;
         border-radius: 16px !important;
@@ -193,6 +201,22 @@ const handleSubmit = async (e) => {
     .form_container {
         width: 100% !important;
         margin-left: 0;
+
+        & .title {
+            font-size: 20px !important;
+        }
+
+        & label {
+            font-size: 14px;
+        }
+
+        & .register-item_wrapper {
+            flex-direction: column;
+
+            & .register-item {
+                width: 100% !important;
+            }
+        }
     }
 
     .page-btn {

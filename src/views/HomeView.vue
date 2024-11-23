@@ -39,6 +39,8 @@ const data = [
   },
 ]
 
+const moneyList = ["10,000,000", "20,000,000", "30,000,000", "50,000,000", "100,000,000", "200,000,000", "500,000,000", "1,000,000,000",]
+
 // API to get VN provinces
 const vnProvincesAPI = "https://provinces.open-api.vn/api/p/"; 
 
@@ -136,14 +138,7 @@ const handleSubmit = async (e) => {
                 <select name="investmentInput" id="investmentInput"
                   class="form-select form-select-sm input-investor aver-semi-bold" v-model="formData.investment">
                   <option disabled>Chọn số tiền dự định đầu tư</option>
-                  <option>10,000,000</option>
-                  <option>20,000,000</option>
-                  <option>30,000,000</option>
-                  <option>50,000,000</option>
-                  <option>100,000,000</option>
-                  <option>200,000,000</option>
-                  <option>500,000,000</option>
-                  <option>1,000,000,000</option>
+                  <option v-for="(money, index) in moneyList" :key="index">{{ money }} đ</option>
                 </select>
               </div>
 

@@ -77,8 +77,6 @@ const handleSubmit = async (e) => {
   location.reload();
 }
 
-
-
 </script>
 
 <template>
@@ -107,7 +105,7 @@ const handleSubmit = async (e) => {
                 <label for="nameInput" class="form-label aver-semi-bold">Họ và tên
                   <span class="page-text-gradient-pink">(*)</span></label>
                 <input required type="text" class="form-control input-investor" id="nameInput" v-model="formData.name" 
-                  placeholder="Nhập Họ và tên của bạn" @input="event => text = event.target.value">
+                  placeholder="Nhập Họ và tên của bạn">
               </div>
 
               <!-- phone and email input -->
@@ -115,15 +113,15 @@ const handleSubmit = async (e) => {
                 <div class="register-item col-6">
                   <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                     <span class="page-text-gradient-pink">(*)</span></label>
-                  <input required type="number" class="form-control input-investor" id="phoneInput" v-model.number="formData.phone"
-                    placeholder="Nhập số điện thoại của bạn" @input="event => text = event.target.value" \>
+                  <input required type="number" pattern="[0-9]"class="form-control input-investor" id="phoneInput" v-model.number="formData.phone"
+                    placeholder="Nhập số điện thoại của bạn">
                 </div>
 
                 <div class="register-item col-6">
                   <label for="emailInput" class="form-label aver-semi-bold">Email
                     <span class="page-text-gradient-pink">(*)</span></label>
                   <input required type="email" class="form-control input-investor" id="emailInput" v-model="formData.email"
-                    placeholder="Nhập email của bạn" @input="event => text = event.target.value">
+                    placeholder="Nhập email của bạn">
                 </div>
               </div>
 

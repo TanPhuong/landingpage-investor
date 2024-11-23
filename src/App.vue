@@ -68,11 +68,11 @@ export default {
         </div>
       </nav>
 
-      <NavigationMobile v-if="mobileView" />
+      <NavigationMobile v-if="mobileView"/>
     </header>
 
     <!-- Body part -->
-    <HomeView :mobileView="mobileView" />
+    <HomeView :mobileView="mobileView"/>
 
     <footer class="position-relative">
 
@@ -341,8 +341,8 @@ footer {
       & .company-information {
 
         & .infor-item:nth-child(2) {
-          border-left:1px solid #c6c6c6;
-          border-right:1px solid #c6c6c6;
+          border-left: 1px solid #c6c6c6;
+          border-right: 1px solid #c6c6c6;
         }
       }
     }
@@ -447,7 +447,7 @@ footer {
 
   .copy-right {
     font-size: 12px;
-    padding: 12px 90px; 
+    padding: 12px 90px;
   }
 
 }

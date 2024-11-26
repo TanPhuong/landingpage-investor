@@ -42,7 +42,7 @@ const data = [
 const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000, 500000000, 1000000000]
 
 // API to get VN provinces
-const vnProvincesAPI = "https://provinces.open-api.vn/api/p/"; 
+const vnProvincesAPI = "https://provinces.open-api.vn/api/p/";
 
 let provincesData = ref([]);
 let cleanedProvincesData = ref([])
@@ -74,14 +74,14 @@ let formData = reactive({
 const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
 
 const handleSubmit = async (e) => {
-  e.preventDefault() 
+  e.preventDefault()
   isLoading.value = true
   const res = await axios.post(submitFormAPI, toRaw(formData));
-  
+
   console.log(toRaw(formData));
   console.log(res)
 
-  isLoading = false;
+  isLoading.value = false;
   location.reload();
 }
 
@@ -90,10 +90,9 @@ const handleSubmit = async (e) => {
 <template>
   <main>
 
-    <ModalForm 
-      :mobile-view="mobileView" 
-      :cleaned-provinces-data="cleanedProvincesData"
-      />
+    <ModalForm :mobile-view="mobileView" 
+    :cleaned-provinces-data="cleanedProvincesData"
+    :form="formData" />
 
     <LetterForm :mobile-view="mobileView" />
 
@@ -114,7 +113,7 @@ const handleSubmit = async (e) => {
               <div class="register-item mb-3">
                 <label for="nameInput" class="form-label aver-semi-bold">Họ và tên
                   <span class="page-text-gradient-pink">(*)</span></label>
-                <input required type="text" class="form-control input-investor" id="nameInput" v-model="formData.name" 
+                <input required type="text" class="form-control input-investor" id="nameInput" v-model="formData.name"
                   placeholder="Nhập Họ và tên của bạn">
               </div>
 
@@ -123,15 +122,15 @@ const handleSubmit = async (e) => {
                 <div class="register-item col-6">
                   <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                     <span class="page-text-gradient-pink">(*)</span></label>
-                  <input required type="number" pattern="[0-9]" class="form-control input-investor" id="phoneInput" v-model.number="formData.phone"
-                    placeholder="Nhập số điện thoại của bạn">
+                  <input required type="number" pattern="[0-9]" class="form-control input-investor" id="phoneInput"
+                    v-model.number="formData.phone" placeholder="Nhập số điện thoại của bạn">
                 </div>
 
                 <div class="register-item col-6">
                   <label for="emailInput" class="form-label aver-semi-bold">Email
                     <span class="page-text-gradient-pink">(*)</span></label>
-                  <input required type="email" class="form-control input-investor" id="emailInput" v-model="formData.email"
-                    placeholder="Nhập email của bạn">
+                  <input required type="email" class="form-control input-investor" id="emailInput"
+                    v-model="formData.email" placeholder="Nhập email của bạn">
                 </div>
               </div>
 
@@ -149,8 +148,8 @@ const handleSubmit = async (e) => {
               <!-- provinces -->
               <div class="register-item mb-4">
                 <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố</label>
-                <select name="cityInput" id="cityInput"  
-                  class="form-select form-select-sm input-investor aver-semi-bold" v-model="formData.provinces">
+                <select name="cityInput" id="cityInput" class="form-select form-select-sm input-investor aver-semi-bold"
+                  v-model="formData.provinces">
                   <option disabled>Chọn Tỉnh/Thành phố</option>
                   <option v-for="(item, index) in cleanedProvincesData" :key="index">{{ item }}</option>
                 </select>
@@ -265,8 +264,10 @@ const handleSubmit = async (e) => {
             tổ chức tour trong nước, quốc tế</div>
 
           <div class="btn-container">
-            <button type="button" class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư vấn</button>
-            <button type="button" class="ceo-mail--btn aver-semi-bold" data-bs-toggle="modal" data-bs-target="#backdropLetter">Thư ngỏ từ CEO</button>
+            <button type="button" class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư
+              vấn</button>
+            <button type="button" class="ceo-mail--btn aver-semi-bold" data-bs-toggle="modal"
+              data-bs-target="#backdropLetter">Thư ngỏ từ CEO</button>
           </div>
         </div>
       </div>
@@ -384,7 +385,8 @@ const handleSubmit = async (e) => {
           </div>
 
           <div class="btn-container">
-            <button type="button" class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư vấn</button>
+            <button type="button" class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư
+              vấn</button>
           </div>
         </div>
 
@@ -412,7 +414,8 @@ const handleSubmit = async (e) => {
             </div>
 
             <div class="btn-container" v-if="!mobileView">
-              <button type="button" class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư vấn</button>
+              <button type="button" class="page-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Đăng ký tư
+                vấn</button>
             </div>
           </div>
         </div>
@@ -783,6 +786,12 @@ const handleSubmit = async (e) => {
         display: flex;
         flex-direction: column;
         margin-bottom: 12px !important;
+      }
+
+      & .input-investor,
+      select.input-investor,
+      .input-investor::placeholder {
+        font-size: 12px;
       }
     }
   }

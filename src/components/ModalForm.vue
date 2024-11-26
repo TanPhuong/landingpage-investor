@@ -10,8 +10,28 @@ const props = defineProps({
     cleanedProvincesData: {
         type: Array,
         required: true
-    }
+    },
+    // formData: {
+    //     type: Object,
+    //     required: true
+    // }
 })
+
+// defineProps({
+//     mobileView: {
+//         type: Boolean,
+//         required: true
+//     },
+//     cleanedProvincesData: {
+//         type: Array,
+//         required: true
+//     },
+//     formData: {
+//         type: Object
+//     }
+// })
+
+// defineEmits(['update:form-data'])
 
 const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000, 500000000, 1000000000]
 
@@ -35,7 +55,7 @@ const handleSubmit = async (e) => {
     console.log(toRaw(formData));
     console.log(res)
 
-    isLoading = false;
+    isLoading.value = false;
     location.reload();
 }
 
@@ -232,11 +252,9 @@ const handleSubmit = async (e) => {
             }
         }
 
-        & select.input-investor {
-            font-size: 12px;
-        }
-
-        & .input-investor::placeholder {
+        & .input-investor, 
+            select.input-investor, 
+            .input-investor::placeholder {
             font-size: 12px;
         }
     }

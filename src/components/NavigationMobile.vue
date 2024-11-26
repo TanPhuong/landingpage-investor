@@ -34,17 +34,17 @@
 
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <a class="nav-link aver-semi-bold" aria-current="page" href="#reason_section">Lý do nên
                                     đầu tư vào Vietnam Tourist</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <a class="nav-link aver-semi-bold" href="#consultant_section">Về chúng tôi</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <a class="nav-link aver-semi-bold" href="#benefit_section">Ưu điểm khi chọn đầu tư</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <a class="nav-link aver-semi-bold" href="#privilege_section">Đặc quyền cao cấp dành
                                     riêng</a>
                             </li>
@@ -111,8 +111,8 @@
             }
         }
 
-        & .nav-item:hover a {
-            color: #005ea0;
+        & .nav-item:hover .nav-link {
+            color: #005ea0 !important;
         }
     }
 

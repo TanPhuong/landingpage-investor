@@ -12,6 +12,8 @@ const props = defineProps({
   }
 })
 
+const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000, 500000000, 1000000000]
+
 let formData = reactive({
   name: "",
   phone: "",
@@ -87,14 +89,7 @@ const handleSubmit = async (e) => {
                                         <select name="investmentInput" id="investmentInput"
                                             class="form-select form-select-sm input-investor aver-semi-bold" v-model="formData.investment">
                                             <option disabled>Chọn số tiền dự định đầu tư</option>
-                                            <option>10,000,000</option>
-                                            <option>20,000,000</option>
-                                            <option>30,000,000</option>
-                                            <option>50,000,000</option>
-                                            <option>100,000,000</option>
-                                            <option>200,000,000</option>
-                                            <option>500,000,000</option>
-                                            <option>1,000,000,000</option>
+                                            <option v-for="(money, index) in moneyList" :key="index">{{ money.toLocaleString() }} đ</option>
                                         </select>
                                     </div>
 

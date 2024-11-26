@@ -22,12 +22,11 @@ const emit = defineEmits(['submit-form']);
 let isLoading = ref(false)
 
 const handleSubmit = async (e) => {
-    isLoading = true;
+    isLoading.value = true;
     console.log(props.form)
 
-    emit('submit-form', props.form); // Gửi dữ liệu lên parent
-    isLoading = false;
-
+    await emit('submit-form', props.form); // Gửi dữ liệu lên parent
+    isLoading.value = false;
 }
 
 const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000, 500000000, 1000000000]

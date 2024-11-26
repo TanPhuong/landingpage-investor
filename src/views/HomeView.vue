@@ -74,7 +74,7 @@ let formData = reactive({
 const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
 
 const handleSubmit = async (e) => {
-  e.preventDefault()
+
   isLoading.value = true
   const res = await axios.post(submitFormAPI, toRaw(formData));
 
@@ -92,7 +92,8 @@ const handleSubmit = async (e) => {
 
     <ModalForm :mobile-view="mobileView" 
     :cleaned-provinces-data="cleanedProvincesData"
-    :form="formData" />
+    :form="formData" 
+    @submit-form="handleSubmit"/>
 
     <LetterForm :mobile-view="mobileView" />
 
@@ -108,7 +109,7 @@ const handleSubmit = async (e) => {
             <div class="aver-semi-bold fs-3 mb-3">👉 <span class="page-text-gradient">Đăng ký nhận tư vấn đầu tư!</span>
             </div>
 
-            <form method="post" @submit="handleSubmit">
+            <form method="post" @submit.prevent="handleSubmit">
               <!-- Name input -->
               <div class="register-item mb-3">
                 <label for="nameInput" class="form-label aver-semi-bold">Họ và tên

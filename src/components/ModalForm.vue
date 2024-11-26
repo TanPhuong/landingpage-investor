@@ -11,53 +11,26 @@ const props = defineProps({
         type: Array,
         required: true
     },
-    // formData: {
-    //     type: Object,
-    //     required: true
-    // }
+    form: {
+        type: Object
+    }
 })
 
-// defineProps({
-//     mobileView: {
-//         type: Boolean,
-//         required: true
-//     },
-//     cleanedProvincesData: {
-//         type: Array,
-//         required: true
-//     },
-//     formData: {
-//         type: Object
-//     }
-// })
-
-// defineEmits(['update:form-data'])
-
-const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000, 500000000, 1000000000]
-
-let formData = reactive({
-    name: "",
-    phone: "",
-    email: "",
-    investment: "Chọn số tiền dự định đầu tư",
-    provinces: "Chọn Tỉnh/Thành phố"
-})
+// Emit sự kiện để thông báo lên parent
+const emit = defineEmits(['submit-form']);
 
 let isLoading = ref(false)
 
-const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
-
 const handleSubmit = async (e) => {
-    e.preventDefault()
-    isLoading.value = true
-    const res = await axios.post(submitFormAPI, toRaw(formData));
+    isLoading = true;
+    console.log(props.form)
 
-    console.log(toRaw(formData));
-    console.log(res)
+    emit('submit-form', props.form); // Gửi dữ liệu lên parent
+    isLoading = false;
 
-    isLoading.value = false;
-    location.reload();
 }
+
+const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000, 500000000, 1000000000]
 
 
 </script>
@@ -83,13 +56,13 @@ const handleSubmit = async (e) => {
                                     tư vấn đầu tư!</span>
                             </div>
 
-                            <form method="post" @submit="handleSubmit">
+                            <form method="post" @submit.prevent="handleSubmit">
                                 <!-- Name input -->
                                 <div class="register-item mb-3">
                                     <label for="nameInput" class="form-label aver-semi-bold">Họ và tên
                                         <span class="page-text-gradient-pink">(*)</span></label>
                                     <input required type="text" class="form-control input-investor" id="nameInput"
-                                        v-model="formData.name" placeholder="Nhập Họ và tên của bạn"
+                                        v-model="form.name" placeholder="Nhập Họ và tên của bạn"
                                         @input="event => text = event.target.value">
                                 </div>
 
@@ -99,7 +72,7 @@ const handleSubmit = async (e) => {
                                         <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                                             <span class="page-text-gradient-pink">(*)</span></label>
                                         <input required type="number" class="form-control input-investor"
-                                            id="phoneInput" v-model.number="formData.phone"
+                                            id="phoneInput" v-model.number="form.phone"
                                             placeholder="Nhập số điện thoại của bạn"
                                             @input="event => text = event.target.value">
                                     </div>
@@ -107,7 +80,7 @@ const handleSubmit = async (e) => {
                                         <label for="emailInput" class="form-label aver-semi-bold">Email
                                             <span class="page-text-gradient-pink">(*)</span></label>
                                         <input required type="email" class="form-control input-investor" id="emailInput"
-                                            v-model="formData.email" placeholder="Nhập email của bạn"
+                                            v-model="form.email" placeholder="Nhập email của bạn"
                                             @input="event => text = event.target.value">
                                     </div>
                                 </div>
@@ -119,7 +92,7 @@ const handleSubmit = async (e) => {
                                         <span class="page-text-gradient-pink">(*)</span></label>
                                     <select name="investmentInput" id="investmentInput"
                                         class="form-select form-select-sm input-investor aver-semi-bold"
-                                        v-model="formData.investment">
+                                        v-model="form.investment">
                                         <option disabled>Chọn số tiền dự định đầu tư</option>
                                         <option v-for="(money, index) in moneyList" :key="index">{{
                                             money.toLocaleString() }} đ</option>
@@ -131,7 +104,7 @@ const handleSubmit = async (e) => {
                                     <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố</label>
                                     <select name="cityInput" id="cityInput"
                                         class="form-select form-select-sm input-investor aver-semi-bold"
-                                        v-model="formData.provinces">
+                                        v-model="form.provinces">
                                         <option disabled>Chọn Tỉnh/Thành phố</option>
                                         <option v-for="(item, index) in cleanedProvincesData" :key="index">{{ item }}
                                         </option>

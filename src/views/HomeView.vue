@@ -73,12 +73,17 @@ let formData = reactive({
 
 const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
 
+const validateNumber = () => {
+  formData.phone = formData.phone.replace(/[^0-9]/g, "")
+}
+
 const handleSubmit = async () => {
 
   isLoading.value = true
+  console.log(toRaw(formData));
+
   const res = await axios.post(submitFormAPI, toRaw(formData));
 
-  console.log(toRaw(formData));
   console.log(res)
 
   isLoading.value = false;
@@ -111,7 +116,7 @@ const handleSubmit = async () => {
             </div>
 
             <form method="post" @submit.prevent="handleSubmit">
-              <!-- Name input -->
+
               <div class="register-item mb-3">
                 <label for="nameInput" class="form-label aver-semi-bold">Họ và tên
                   <span class="page-text-gradient-pink">(*)</span></label>
@@ -119,13 +124,12 @@ const handleSubmit = async () => {
                   placeholder="Nhập Họ và tên của bạn">
               </div>
 
-              <!-- phone and email input -->
               <div class="register-item_wrapper mb-3 row">
                 <div class="register-item col-6">
                   <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                     <span class="page-text-gradient-pink">(*)</span></label>
-                  <input required type="number" pattern="[0-9]" class="form-control input-investor" id="phoneInput"
-                    v-model.number="formData.phone" placeholder="Nhập số điện thoại của bạn">
+                  <input required type="text" class="form-control input-investor" id="phoneInput" maxlength="12"
+                    v-model="formData.phone" placeholder="Nhập số điện thoại của bạn" @input="validateNumber">
                 </div>
 
                 <div class="register-item col-6">
@@ -136,18 +140,16 @@ const handleSubmit = async () => {
                 </div>
               </div>
 
-              <!-- investment -->
               <div class="register-item mb-3">
                 <label for="investmentInput" class="form-label aver-semi-bold">Số tiền dự định đầu tư
                   <span class="page-text-gradient-pink">(*)</span></label>
                 <select name="investmentInput" id="investmentInput"
                   class="form-select form-select-sm input-investor aver-semi-bold" v-model="formData.investment">
                   <option disabled>Chọn số tiền dự định đầu tư</option>
-                  <option v-for="(money, index) in moneyList" :key="index">{{ money.toLocaleString() }} đ</option>
+                  <option v-for="(money, index) in moneyList" :key="index">{{ money.toLocaleString() }}đ</option>
                 </select>
               </div>
 
-              <!-- provinces -->
               <div class="register-item mb-4">
                 <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố</label>
                 <select name="cityInput" id="cityInput" class="form-select form-select-sm input-investor aver-semi-bold"
@@ -164,6 +166,8 @@ const handleSubmit = async () => {
             </form>
           </div>
         </div>
+
+
       </div>
     </div>
 

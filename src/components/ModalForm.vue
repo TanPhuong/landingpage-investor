@@ -20,6 +20,10 @@ const props = defineProps({
 
 const localForm = reactive(props.form)
 
+const validateNumber = () => {
+    localForm.phone = localForm.phone.replace(/[^0-9]/g, "")
+}
+
 
 // Emit sự kiện để thông báo lên parent
 const emit = defineEmits(['submit-form']);
@@ -70,10 +74,9 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
                                     <div class="register-item col-6">
                                         <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                                             <span class="page-text-gradient-pink">(*)</span></label>
-                                        <input required type="number" class="form-control input-investor"
-                                            id="phoneInput" v-model.number="localForm.phone"
-                                            placeholder="Nhập số điện thoại của bạn"
-                                            @input="event => text = event.target.value">
+                                        <input required type="text" class="form-control input-investor" id="phoneInput"
+                                            maxlength="12" v-model="localForm.phone"
+                                            placeholder="Nhập số điện thoại của bạn" @input="validateNumber">
                                     </div>
                                     <div class="register-item col-6">
                                         <label for="emailInput" class="form-label aver-semi-bold">Email
@@ -93,7 +96,8 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
                                         class="form-select form-select-sm input-investor aver-semi-bold"
                                         v-model="localForm.investment">
                                         <option disabled>Chọn số tiền dự định đầu tư</option>
-                                        <option v-for="(money, index) in moneyList" :key="index">{{ money.toLocaleString() }} đ</option>
+                                        <option v-for="(money, index) in moneyList" :key="index">{{
+                                            money.toLocaleString() }}đ</option>
                                     </select>
                                 </div>
 
@@ -149,7 +153,6 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
 }
 
 .form_container {
-    width: 40%;
     max-width: 600px;
     background-color: #fff;
     border-radius: 10px;
@@ -223,9 +226,9 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
             }
         }
 
-        & .input-investor, 
-            select.input-investor, 
-            .input-investor::placeholder {
+        & .input-investor,
+        select.input-investor,
+        .input-investor::placeholder {
             font-size: 12px;
         }
     }

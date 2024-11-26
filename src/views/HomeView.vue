@@ -92,6 +92,7 @@ const handleSubmit = async () => {
 
     <ModalForm :mobile-view="mobileView" 
     :cleaned-provinces-data="cleanedProvincesData"
+    :loading="isLoading"
     :form="formData" 
     @submit-form="handleSubmit"/>
 
@@ -158,7 +159,7 @@ const handleSubmit = async () => {
 
               <div class="d-flex justify-content-center">
                 <button type="submit" class="page-btn" v-if="!isLoading">Gửi thông tin</button>
-                <button type="submit" class="page-btn" v-else>Đang gửi...</button>
+                <button type="submit" class="page-btn" disabled v-else>Đang gửi...</button>
               </div>
             </form>
           </div>

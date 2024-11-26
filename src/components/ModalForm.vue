@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue';
+import { reactive } from 'vue';
 
 const props = defineProps({
     mobileView: {
@@ -12,6 +12,9 @@ const props = defineProps({
     },
     form: {
         type: Object
+    },
+    loading: {
+        type: Boolean
     }
 })
 
@@ -21,14 +24,9 @@ const localForm = reactive(props.form)
 // Emit sự kiện để thông báo lên parent
 const emit = defineEmits(['submit-form']);
 
-let isLoading = ref(false)
-
 const handleSubmit = async () => {
-    isLoading.value = true;
     console.log(props.form)
-
     await emit('submit-form', props.form); // Gửi dữ liệu lên parent
-    isLoading.value = false;
 }
 
 const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000, 500000000, 1000000000]
@@ -95,8 +93,7 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
                                         class="form-select form-select-sm input-investor aver-semi-bold"
                                         v-model="localForm.investment">
                                         <option disabled>Chọn số tiền dự định đầu tư</option>
-                                        <option v-for="(money, index) in moneyList" :key="index">{{
-                                            money.toLocaleString() }} đ</option>
+                                        <option v-for="(money, index) in moneyList" :key="index">{{ money.toLocaleString() }} đ</option>
                                     </select>
                                 </div>
 
@@ -113,8 +110,8 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="submit" class="page-btn" v-if="!isLoading">Gửi thông tin</button>
-                                    <button type="submit" class="page-btn" v-else>Đang gửi...</button>
+                                    <button type="submit" class="page-btn" v-if="!loading">Gửi thông tin</button>
+                                    <button type="submit" class="page-btn" disabled v-else>Đang gửi...</button>
                                 </div>
 
                             </form>

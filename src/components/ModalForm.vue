@@ -1,6 +1,5 @@
 <script setup>
-import axios from 'axios';
-import { reactive, ref, toRaw } from 'vue';
+import { reactive, ref } from 'vue';
 
 const props = defineProps({
     mobileView: {
@@ -16,12 +15,15 @@ const props = defineProps({
     }
 })
 
+const localForm = reactive(props.form)
+
+
 // Emit sự kiện để thông báo lên parent
 const emit = defineEmits(['submit-form']);
 
 let isLoading = ref(false)
 
-const handleSubmit = async (e) => {
+const handleSubmit = async () => {
     isLoading.value = true;
     console.log(props.form)
 
@@ -61,7 +63,7 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
                                     <label for="nameInput" class="form-label aver-semi-bold">Họ và tên
                                         <span class="page-text-gradient-pink">(*)</span></label>
                                     <input required type="text" class="form-control input-investor" id="nameInput"
-                                        v-model="form.name" placeholder="Nhập Họ và tên của bạn"
+                                        v-model="localForm.name" placeholder="Nhập Họ và tên của bạn"
                                         @input="event => text = event.target.value">
                                 </div>
 
@@ -71,7 +73,7 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
                                         <label for="phoneInput" class="form-label aver-semi-bold">Số điện thoại
                                             <span class="page-text-gradient-pink">(*)</span></label>
                                         <input required type="number" class="form-control input-investor"
-                                            id="phoneInput" v-model.number="form.phone"
+                                            id="phoneInput" v-model.number="localForm.phone"
                                             placeholder="Nhập số điện thoại của bạn"
                                             @input="event => text = event.target.value">
                                     </div>
@@ -79,7 +81,7 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
                                         <label for="emailInput" class="form-label aver-semi-bold">Email
                                             <span class="page-text-gradient-pink">(*)</span></label>
                                         <input required type="email" class="form-control input-investor" id="emailInput"
-                                            v-model="form.email" placeholder="Nhập email của bạn"
+                                            v-model="localForm.email" placeholder="Nhập email của bạn"
                                             @input="event => text = event.target.value">
                                     </div>
                                 </div>
@@ -91,7 +93,7 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
                                         <span class="page-text-gradient-pink">(*)</span></label>
                                     <select name="investmentInput" id="investmentInput"
                                         class="form-select form-select-sm input-investor aver-semi-bold"
-                                        v-model="form.investment">
+                                        v-model="localForm.investment">
                                         <option disabled>Chọn số tiền dự định đầu tư</option>
                                         <option v-for="(money, index) in moneyList" :key="index">{{
                                             money.toLocaleString() }} đ</option>
@@ -103,7 +105,7 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
                                     <label for="cityInput" class="form-label aver-semi-bold">Tỉnh/Thành phố</label>
                                     <select name="cityInput" id="cityInput"
                                         class="form-select form-select-sm input-investor aver-semi-bold"
-                                        v-model="form.provinces">
+                                        v-model="localForm.provinces">
                                         <option disabled>Chọn Tỉnh/Thành phố</option>
                                         <option v-for="(item, index) in cleanedProvincesData" :key="index">{{ item }}
                                         </option>

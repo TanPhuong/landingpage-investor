@@ -73,7 +73,7 @@ let formData = reactive({
 
 const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
 
-const handleSubmit = async (e) => {
+const handleSubmit = async () => {
 
   isLoading.value = true
   const res = await axios.post(submitFormAPI, toRaw(formData));

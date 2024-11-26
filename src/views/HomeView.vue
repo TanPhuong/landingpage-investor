@@ -46,6 +46,7 @@ const vnProvincesAPI = "https://provinces.open-api.vn/api/p/";
 
 let provincesData = ref([]);
 let cleanedProvincesData = ref([])
+let isLoading = ref(false)
 
 onMounted(async () => {
   await fetch(vnProvincesAPI)
@@ -74,10 +75,13 @@ const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
 
 const handleSubmit = async (e) => {
   e.preventDefault() 
+  isLoading.value = true
   const res = await axios.post(submitFormAPI, toRaw(formData));
   
   console.log(toRaw(formData));
   console.log(res)
+
+  isLoading = false;
   location.reload();
 }
 
@@ -153,7 +157,8 @@ const handleSubmit = async (e) => {
               </div>
 
               <div class="d-flex justify-content-center">
-                <button type="submit" class="page-btn">Gửi thông tin</button>
+                <button type="submit" class="page-btn" v-if="!isLoading">Gửi thông tin</button>
+                <button type="submit" class="page-btn" v-else>Đang gửi...</button>
               </div>
             </form>
           </div>

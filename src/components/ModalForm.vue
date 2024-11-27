@@ -185,7 +185,7 @@ const moneyList = [10000000, 20000000, 30000000, 50000000, 100000000, 200000000,
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) { 
 
     .modal {
         background: linear-gradient(rgba(0, 130, 223, 0.3), rgba(0, 94, 160, 0.3));

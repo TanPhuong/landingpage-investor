@@ -71,7 +71,8 @@ let formData = reactive({
   provinces: "Chọn Tỉnh/Thành phố"
 })
 
-const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
+// const submitFormAPI = "http://localhost:3000/api/email/sendEmail";
+const submitFormAPI = "https://be-investor.vercel.app/api/email/sendEmail"
 
 const validateNumber = () => {
   formData.phone = formData.phone.replace(/[^0-9]/g, "")
@@ -110,13 +111,13 @@ const handleSubmit = async () => {
     <!-- Form register section -->
     <div id="form-register_section" class="d-flex">
       <div class="form-register_wrapper w-95 d-flex justify-content-end">
+
         <div class="form-register_container">
           <div class="container">
             <div class="aver-semi-bold fs-3 mb-3">👉 <span class="page-text-gradient">Đăng ký nhận tư vấn đầu tư!</span>
             </div>
 
             <form method="post" @submit.prevent="handleSubmit">
-
               <div class="register-item mb-3">
                 <label for="nameInput" class="form-label aver-semi-bold">Họ và tên
                   <span class="page-text-gradient-pink">(*)</span></label>

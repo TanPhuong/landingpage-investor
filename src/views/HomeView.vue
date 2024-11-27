@@ -673,7 +673,7 @@ const handleSubmit = async () => {
 
     & .detail-section {
       margin-left: 150px;
-      width: 40%;
+      width: 45%;
     }
 
     & .description-text {
